@@ -4,6 +4,7 @@ html
         include ./head.pug
         block head-content
     body
-        block body-content
+        include ./mainnav.pug
+        block page-content
         include ./bodyscripts.pug
         block body-scripts
