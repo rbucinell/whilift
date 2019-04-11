@@ -1,0 +1,28 @@
+{
+  "name": "whyilift.com",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rbucinell/whilift.git"
+  },
+  "author": "Ryan Bucinell",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/rbucinell/whilift/issues"
+  },
+  "homepage": "https://github.com/rbucinell/whilift#readme",
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-pug": "^4.0.1",
+    "gulp-watch": "^5.0.1"
+  },
+  "dependencies": {
+    "bootstrap": "^4.3.1"
+  }
+}
