@@ -1,0 +1,19 @@
+extends partials/layout.pug
+
+mixin alphaLi( letter )
+    li.page-item: a(class="page-link" href="profile/showProfiles?lastNameSubString=#{letter}&") #{letter}
+
+
+
+block head-content
+    title Why I Lift - Lister Profiles
+block page-content
+    main.container 
+        h1(class="mx-auto" style="width:200px;") Lifter Profiles
+        p Click on a user's image to view the profile
+
+        nav( aria-label="Lifter profile links by alphabet")
+            ul.pagination
+                - for( let i = 0; i < 26; i++ )
+                    +alphaLi( '#{((i+10).toString(36).toUpperCase())}' )
+                
