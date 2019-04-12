@@ -2,6 +2,10 @@ body {
     background-color: #dfdfdf
 }
 
+main {
+    border: 1px solid var(--secondary);
+}
+
 #login-btn {
     margin-right: 5px;
 }
@@ -12,6 +16,9 @@ body {
     background-position-y: -450px;*/
 }
 
-main {
-    border: 1px solid gray
+.page-link {
+    color: var(--red);
+}
+.page-link:hover {
+    color: var(--red);
 }
