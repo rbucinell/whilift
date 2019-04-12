@@ -1,19 +1,47 @@
 extends partials/layout.pug
 
-mixin alphaLi( letter )
-    li.page-item: a(class="page-link" href="profile/showProfiles?lastNameSubString=#{letter}&") #{letter}
-
-
+mixin pagnationLetter( letter )
+    li.page-item
+        - let pagnationurl = `profile/showProfiles?lastNameSubString=${letter}&`
+        a.page-link(href=pagnationurl) #{letter}
 
 block head-content
     title Why I Lift - Lister Profiles
 block page-content
     main.container 
-        h1(class="mx-auto" style="width:200px;") Lifter Profiles
-        p Click on a user's image to view the profile
+        h1 Lifter Profiles
 
-        nav( aria-label="Lifter profile links by alphabet")
-            ul.pagination
-                - for( let i = 0; i < 26; i++ )
-                    +alphaLi( '#{((i+10).toString(36).toUpperCase())}' )
+        .row
+            nav( aria-label="Lifter profile links by alphabet")
+                ul.pagination.pagination-sm.flex-wrap.d-flex.justify-content-center
+                    each letter in ['A', 'B','C','D','E','F','G','H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+                        +pagnationLetter( letter )
+        .row
+            article
+                ul.list-unstyled.list-group
+                    each val,i in new Array(10)
+                        - var index = "#" + i;
+                        - var imgurl = "http://lorempixel.com/400/200/sports/" + i
+                        li.media: a.list-group-item.list-group-item-action(href=index style="display:inline-flex")
+                            img.mr-3(height="100px" width="120px" src=imgurl)
+                            .media-body
+                                h5.mt-0.mt-1 Sottosanti, Kathi Croston
+                                    small &nbsp;♀
+                                .row
+                                    .col-sm-4.col-md-auto: span.text-muted Nationality: 
+                                        | USA
+                                    .col-sm-4.col-md-auto: span.text-muted Federation: 
+                                        | WNPF
+                                .row
+                                    .col-sm-4.col-md-auto: span.text-muted Height: 
+                                        | 65"
+                                    .col-sm-4.col-md-auto: span.text-muted Weight: 
+                                        | 260
+                                        small &nbsp;lbs
+                                    .col-sm-4.col-md-auto: span.text-muted Experience: 
+                                        | 9
+                                        small &nbsp;yrs
+
+        
+
                 
