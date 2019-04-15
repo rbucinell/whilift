@@ -1,5 +1,5 @@
 body {
-    background-color: #dfdfdf
+    background-color: var(--gray);
 }
 
 main {
@@ -9,11 +9,10 @@ main {
 #login-btn {
     margin-right: 5px;
 }
-#main-nav {
-    /*background-image: url(../img/banner-header.jpg);
-    background-repeat: no-repeat;
+#displayheader {
+    background-image: url(../img/banner-header.jpg);
     background-size: cover;
-    background-position-y: -450px;*/
+    background-position-y: -250px;
 }
 
 .page-link {
