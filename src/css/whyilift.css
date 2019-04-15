@@ -11,8 +11,8 @@ main {
 }
 #displayheader {
     background-image: url(../img/banner-header.jpg);
-    background-size: cover;
-    background-position-y: -250px;
+    background-size: unset;
+    background-position-y: -300px;
 }
 
 .page-link {
