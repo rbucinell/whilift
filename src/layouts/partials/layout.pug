@@ -1,11 +1,13 @@
 doctype
+//This is a generated file. If you make changes to this file, notify the developer or you may lose your changes
 html
     head
         include ./head.pug
         block head-content
     body
-        include ./mainnav.pug
-        block page-content
+        .background-image
+            include ./mainnav.pug
+            block page-content
         include ./footer.pug
         include ./bodyscripts.pug
         block body-scripts
