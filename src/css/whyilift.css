@@ -3,12 +3,22 @@
     --brand-black: #222;
 }
 
+html, body {
+    background-color: var(--gray);
+    height:100%;
+}
 .bg-brand-black{
     background-color: var( --brand-black )!important;
+    opacity: .85;
 }
 
-body {
-    background-color: var(--gray);
+
+.background-image{
+    background-image: url('../img/banner-header.jpg');
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
 }
 
 main {
@@ -39,4 +49,5 @@ main {
     height: 60px;
     line-height: 60px;
     background-color: #f5f5f5;
+    color: white;
 }
