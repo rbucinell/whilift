@@ -1,12 +1,18 @@
 :root
 {
     --brand-black: #222;
+    --brand-red: rgb( 213,60,55);
 }
 
 html, body {
-    background-color: var(--gray);
+    background-color: #dfdfdf;
     height:100%;
 }
+
+.btn-danger {
+    background-color: var(--brand-red);
+}
+
 .bg-brand-black{
     background-color: var( --brand-black )!important;
     opacity: .85;
@@ -19,6 +25,13 @@ html, body {
     background-size: cover;
     background-position: center;
     height: 100%;
+}
+
+.main-nav-item {
+    font-family: 'AvenirNext', sans-serif;
+    width: inherit;
+    text-decoration: none;
+
 }
 
 main {
