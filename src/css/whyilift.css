@@ -19,9 +19,10 @@ main {
     margin-right: 5px;
 }
 #displayheader {
-    background-image: url(../img/banner-header.jpg);
-    background-size: unset;
-    background-position-y: -300px;
+    background-image: url(../img/banner-header-thin.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .page-link {
