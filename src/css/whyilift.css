@@ -2,11 +2,7 @@
 {
     --brand-black: #222;
     --brand-red: rgb( 213,60,55);
-}
-
-html, body {
-    background-color: #dfdfdf;
-    height:100%;
+    --brand-gray: #dfdfdf;
 }
 
 .btn-danger {
@@ -18,13 +14,19 @@ html, body {
     opacity: .85;
 }
 
+.bg-brand-red{
+    background-color: var( --brand-red )!important;
+    opacity: .85;
+}
+
 
 .background-image{
-    background-image: url('../img/banner-header.jpg');
+    background-color: gray;
+    background-image: url('../img/banner.jpg');
     position: relative;
     background-size: cover;
     background-position: center;
-    height: 100%;
+    background-attachment: fixed;
 }
 
 .main-nav-item {
@@ -35,7 +37,7 @@ html, body {
 }
 
 main {
-    border: 1px solid var(--secondary);
+    /*border: 1px solid var(--secondary);*/
 }
 
 #login-btn {
@@ -56,7 +58,6 @@ main {
 }
 
 .footer{
-    position: absolute;
     bottom: 0;
     width: 100%;
     height: 60px;
