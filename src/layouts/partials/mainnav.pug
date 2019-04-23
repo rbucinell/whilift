@@ -1,20 +1,16 @@
-//- Navigation Links    
-nav.navbar.navbar-expand-lg.navbar-dark.bg-brand-black
-    button.navbar-toggler.collapsed(type="button" data-toggle="collapse" data-target="#main-nav-links" aria-controls="main-nav-links" aria-expanded="false" aria-label="Toggle navigation")
-          span.navbar-toggler-icon
-    div#main-nav-links.navbar-collapse.justify-content-md-center.collapse
-        ul.navbar-nav
+nav.navbar.navbar-expand-lg.navbar-dark.bg-brand-black.sticky-top
+    a.navbar-brand.d-flex.w-50.mr-auto(href="#")
+        img(src='img/logo.png', alt='Why I lift logo', width='100', height="45")
+    button.navbar-toggler(type='button', data-toggle='collapse', data-target='#main-nav-links')
+        span.navbar-toggler-icon
+    #main-nav-links.navbar-collapse.collapse.w-100
+        ul.navbar-nav.w-100.justify-content-center
             li.nav-item.main-nav-item.active: a.nav-link(href='#') Home
             li.nav-item.main-nav-item: a.nav-link(href='#') Profiles
             li.nav-item.main-nav-item: a.nav-link(href='#') Pictures
             li.nav-item.main-nav-item: a.nav-link(href='#') Videos
             li.nav-item.main-nav-item: a.nav-link(href='#') Mission
-            li.nav-item.main-nav-item: a.nav-link(href='#') Contact Us
-//- Logo and Login Links
-nav.navbar.navbar-expand-sm.navbar-dark
-    a.navbar-brand.mr-auto(href='#')
-        //- width='102' height='45'
-        img(src='img/logo.png', alt='')
-    form.form-inline.my-2.my-lg-0
+            li.nav-item.main-nav-item: a.nav-link(href='#') Nutrition
+        form.form-inline.nav.ml-auto.w-100.justify-content-end
             button#login-btn.btn.btn-outline-light.my-2.my-sm-0(type='button') Login
             button#create-profile-btn.btn.btn-danger.my-2.my-sm-0(type='button') Create Profile
