@@ -4,10 +4,9 @@ html
     head
         include ./head.pug
         block head-content
-    body
-        .background-image
-            include ./mainnav.pug
-            block page-content
+    body.background-image
+        include ./mainnav.pug
+        block page-content
         include ./footer.pug
         include ./bodyscripts.pug
         block body-scripts
