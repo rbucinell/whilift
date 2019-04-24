@@ -1,0 +1,287 @@
+extends partials/layout.pug
+
+block head-content
+    title WhyILift - Kathi Croston Sottosanti
+    style(type='text/css').
+        body{
+            background: #DAE3E7;
+        }
+        .row{
+            margin-top: 40px;
+        }
+        html,body,h1,h2,h3,h4,h5,h6 {
+            font-family: "Roboto", sans-serif
+        }
+        div.card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            padding: 10px 0;
+            border-top: 3px solid var(--brand-gray);
+        }
+        .list-group {
+            list-style: disc inside;
+        }
+        .list-group-item {
+            display: list-item;
+        }
+        .find-more{
+            text-align: right;
+        }
+        .label-theme{
+            background: #3AAA64;
+            font-size: 14px;
+            padding: .3em .7em .3em;
+            color: #fff;
+            border-radius: .25em;
+        }
+        .label a{
+            color: inherit;
+        }
+block page-content
+    header.header.bg-brand-red
+      .container
+        .teacher-name(style='padding-top:20px;')
+          .row(style='margin-top:0px;')
+            .col-md-9
+              h2.text-light(style='font-size:38px')
+                strong Kathi Croston Sottosanti
+            .col-md-3
+              .button(style='float:right;')
+                a.btn.btn-outline-light.btn-sm(href='#') Edit Profile
+        .row(style='margin-top:0px;')
+          .col-md-3: a(href='#'): img.rounded-circle(src='https://picjumbo.com/wp-content/uploads/alone-with-his-thoughts-1080x720.jpg', alt='Kamal', style='width:200px;height:200px')
+          .col-md-6
+            // Rank & Qualifications
+            h5(style='color:#3AAA64')
+              | Associate Professor, 
+              small Dept. of CSE, Jatiya Kabi Kazi Nazrul Islam University
+            p
+              | PhD (On study at BUET), M.Sc. in research on ICT(UPC, Spain), M.Sc. in research on ICT(UCL, Belgium).
+            p Address: Namapara, Trishal, Mymensingh
+          .col-md-3.text-center
+            // Phone & Social
+            span.number(style='font-size:18px')
+              | Phone:
+              strong +8801732226402
+            .button(style='padding-top:18px')
+              a.btn.btn-outline-light.btn-block(href='mailto:ahmkctg@yahoo.com') Send Email
+            .social-icons(style='padding-top:18px')
+              a(href='#')
+                span.fa-stack.fa-lg.text-dark
+                  i.fa.fa-circle.fa-stack-2x
+                  i.fab.fa-linkedin.fa-stack-1x.fa-inverse
+              a(href='#')
+                span.fa-stack.fa-lg.text-dark
+                  i.fa.fa-circle.fa-stack-2x
+                  i.fab.fa-twitter.fa-stack-1x.fa-inverse
+              a(href='#')
+                span.fa-stack.fa-lg.text-dark
+                  i.fa.fa-circle.fa-stack-2x
+                  i.fab.fa-facebook.fa-stack-1x.fa-inverse
+              a(href='#')
+                span.fa-stack.fa-lg.text-dark
+                  i.fa.fa-circle.fa-stack-2x
+                  i.fab.fa-slideshare.fa-stack-1x.fa-inverse
+    // End of Header
+    // Main container
+    .container
+      // Section:Biography
+      .row
+        .col-md-12
+          .card.card-block.text-xs-left(style="background-color: var(--brand-gray);")
+            .card-body
+                h3.card-title
+                    i.fa.fa-user.fa-fw.fa-sm
+                    | Biography
+                div(style='height: 15px')
+                p.card-text
+                    | In her first powerlifting meet in the Master s 50-54 148 weight class Kathi Sottosanti set the New jersey State  and National records in the squat, bench press, deadlift and total. Kathi also set  state record for novice deadlift in the Master s 50-54 148 weight class.
+      // End:Biography
+      // Section:Interests
+      .row
+        .col-md-12
+          .card.card-block
+            h2.card-title(style='color:#009688')
+              i.fa.fa-rocket.fa-fw
+              | Interests
+            ul.list-group(style='margin-top:15px;margin-bottom:15px;')
+              li.list-group-item Cloud & Parallel Computing
+              li.list-group-item Big Data Analysis and Management
+              li.list-group-item High-performance and Low-Power Real-Time Systems
+              li.list-group-item Mobile Embedded Systems and Network Security
+      // End :Interests
+      // Section:Awards
+      .row
+        .col-md-12
+          .card.card-block
+            h2.card-title(style='color:#009688')
+              i.fa.fa-trophy.fa-fw
+              | Awards
+            div(style='height: 15px')
+            table.table.table-bordered.table-hover
+              thead.thead-default
+                tr
+                  th Year
+                  th Name of the award
+              tbody
+                tr
+                  td 2006
+                  td Cloud & Parallel Computing
+                tr
+                  td 2009
+                  td Big Data Analysis and Management
+                tr
+                  td 2013
+                  td High-performance and Low-Power Real-Time Systems
+      // End:Awards
+      // Section:Teaching Summary
+      .row
+        .col-md-12
+          .card.card-block
+            h2.card-title(style='color:#009688')
+              i.fa.fa-cubes.fa-fw
+              | Teaching Summary
+            div(style='height: 15px')
+            table.table.table-bordered
+              thead.thead-default
+                tr
+                  th Year
+                  th Rank
+                  th Company/Institute/University
+              tbody
+                tr
+                  td 2006-Present
+                  td Associate Professor
+                  td Jatiya Kabi Kazi Nazrul Islam University
+                tr
+                  td 2004-2006
+                  td Lecturer
+                  td Brac University
+                tr
+                  td 2003-2004
+                  td Senior System Administrator
+                  td Axle Technologies
+      // End:Teaching Summary
+      // Section:Class Observing
+      .row
+        .col-md-12
+          .card.card-block
+            h2.card-title(style='color:#009688')
+              i.fa.fa-book.fa-fw
+              | Classes Observing
+            div(style='height: 15px')
+            table.table.table-bordered
+              thead.thead-default
+                tr
+                  th Course Code
+                  th Course Name
+              tbody
+                tr
+                  td CSE-121
+                  td Structured Programming
+                tr
+                  td CSE-221
+                  td Algorithms
+                tr
+                  td CSE-305
+                  td Theory of Computation
+                tr
+                  td CSE-405
+                  td Network Security
+                tr
+                  td CSE-439
+                  td Digital Image Processing
+      // End:Class Observing
+      // Section:Resources
+      .row
+        .col-md-12
+          .card.card-block
+            h2.card-title(style='color:#009688')
+              i.fa.fa-database.fa-fw
+              | Resources
+            div(style='height: 15px')
+            table.table.table-bordered
+              thead.thead-default
+                tr
+                  th Topic
+                  th Info
+              tbody
+                tr
+                  td How Bubble Sort Works
+                  td(style='border-left: 3px solid #009688;')
+                    | Bubble sort. Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that repeatedly steps through the list to be sorted, compares each pair.
+                    .find-more
+                      | Find out more on:
+                      span.label.label-theme
+                        i.fa.fa-file-pdf-o
+                          a(href='#')  PDF
+                      span.label.label-theme
+                        i.fa.fa-youtube-square
+                          a(href='#')  YouTube
+                      span.label.label-theme
+                        i.fa.fa-slideshare
+                          a(href='#')  SlideShare
+                tr
+                  td Greedy Method
+                  td(style='border-left: 3px solid #009688;')
+                    | A greedy algorithm is an algorithmic paradigm that follows the problem solving heuristic of making the locally optimal choice at each stage with the hope of finding a global optimum.
+                    .find-more
+                      | Find out more on:
+                      span.label.label-theme
+                        i.fa.fa-file-pdf-o
+                          a(href='#')  PDF
+                      span.label.label-theme
+                        i.fa.fa-youtube-square
+                          a(href='#')  YouTube
+                      span.label.label-theme
+                        i.fa.fa-slideshare
+                          a(href='#')  SlideShare
+                tr
+                  td EDI Security
+                  td(style='border-left: 3px solid #009688;')
+                    | Electronic data interchange (EDI) is a major innovation in the practical use of computing. It is already being used extensively in some segments of the retailing
+                    .find-more
+                      | Find out more on:
+                      span.label.label-theme
+                        i.fa.fa-file-pdf-o
+                          a(href='#')  PDF
+                      span.label.label-theme
+                        i.fa.fa-youtube-square
+                          a(href='#')  YouTube
+                      span.label.label-theme
+                        i.fa.fa-slideshare
+                          a(href='#')  SlideShare
+      // End:Resources
+      // Section:Publications
+      .row
+        .col-md-12
+          .card.card-block.text-xs-left(style='margin-bottom:15px;')
+            h2.card-title(style='color:#009688')
+              i.fa.fa-newspaper-o.fa-fw
+              |  Publications
+            div(style='height: 15px')
+            ul.list-group
+              li.list-group-item
+                | A H M Kamal,"Inserting Item to a Sorted List",USTC Teachers Annual (USTA - 2002),8(1),2002
+              li.list-group-item
+                | A H M Kamal, Cross application of Round Robin Scheduling and Shortest Job First Serve in CPU Scheduling to improve preemptive scheduling, Accepted for publication at Kabi Nazrul University Journal - 2011
+              li.list-group-item
+                | A H M Kamal, UB Operator precedence parsing algorithm, Accepted for Computer Science & Engineering R esearch Journal (CSERJ) in Vol. 7 (2011) (ISSN: 1990-4010) of Chittagong University of Engineering and Technology (CUET)
+              li.list-group-item
+                | A H M Kamal, Retrieving Packets from Losing during Service Disruption Time, During Vertical Handover among UMTS and WLAN, Int. J. Advanced Networking and Applications, Volume 03, Issue 04, pp 1229-1232 (2012)
+              li.list-group-item
+                | A H M Kamal, An Algorithm to trigger VHO based on the speed of roamer- who is just leaving the WLAN in a room,International Journal of Emerging Technologies in Science and Engineering, Canada, Vol: 3, No 1, pp:21-25, 2010
+              li.list-group-item
+                | A. H. M. Kamal,"Use of ICTs in Gender Equalization" , USTC Teachers Annual (USTA-2010)
+              li.list-group-item
+                | A H M Kamal,"ICT in Managing Disaster in Bangladesh",USTC Teachers Annual (USTA-2010)
+              li.list-group-item
+                | Md. Saiful Islam and AHM Kamal, “Ratio method for solving any equation of single variable”, International Journal of Engineering and Technology, Vol-6, Issue-2, June 2009, ISSN: 1812-7711
+              li.list-group-item
+                | A H M Kamal, Montse Parada, "Blob translation based estimation technique to handle occlusion while using mean-shift in tracking",Research Journal of applied sciences, vol. 4, issue 4, pp 129-133, 2009
+              li.list-group-item
+                | A H M Kamal,"An easy, flexible and linear way for generating precedence functions", Multimedia Cyberscape journal (MMCJ), Malaysia, Vol: 2, pp. 44-49, 2004
+    //- main.container-fluid
+    //-     .row.justify-content-md-center.bg-brand-red
+    //-        h1.text-light.justify-content-md-center Kathi Croston Sottosanti
