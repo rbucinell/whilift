@@ -1,5 +1,20 @@
 extends partials/layout.pug
 
+mixin recordsRow( fed, div, equip, level, country, state, event, wtcls, lift, total, date, details)
+    tr
+        td #{fed}
+        td #{div}
+        td #{equip}
+        td #{level}
+        td #{country}
+        td #{state}
+        td #{event}
+        td #{wtcls}
+        td #{lift}
+        td #{total}
+        td #{date}
+        td #{details}
+
 block head-content
     title WhyILift - Kathi Croston Sottosanti
     style(type='text/css').
@@ -50,7 +65,7 @@ block page-content
               .button(style='float:right;')
                 a.btn.btn-outline-light.btn-sm(href='#') Edit Profile
         .row(style='margin-top:0px;')
-          .col-md-3: a(href='#'): img.rounded-circle(src='https://picjumbo.com/wp-content/uploads/alone-with-his-thoughts-1080x720.jpg', alt='Kamal', style='width:200px;height:200px')
+          .col-md-3: a(href='#'): img.rounded-circle(src='http://172.100.199.196/atlas/resources/images/profiles/1000636/thumb/profilepic_4129.jpg', alt='Kamal', style='width:200px;height:200px')
           .col-md-6
             // Rank & Qualifications
             h5(style='color:#3AAA64')
@@ -87,30 +102,52 @@ block page-content
     // Main container
     .container
       // Section:Biography
-      .row
+      section.row
         .col-md-12
           .card.card-block.text-xs-left(style="background-color: var(--brand-gray);")
             .card-body
                 h3.card-title
-                    i.fa.fa-user.fa-fw.fa-sm
-                    | Biography
+                  i.fa.fa-user.fa-fw.fa-sm
+                  | Biography
                 div(style='height: 15px')
                 p.card-text
-                    | In her first powerlifting meet in the Master s 50-54 148 weight class Kathi Sottosanti set the New jersey State  and National records in the squat, bench press, deadlift and total. Kathi also set  state record for novice deadlift in the Master s 50-54 148 weight class.
+                  | In her first powerlifting meet in the Master s 50-54 148 weight class Kathi Sottosanti set the New jersey State  and National records in the squat, bench press, deadlift and total. Kathi also set  state record for novice deadlift in the Master s 50-54 148 weight class.
       // End:Biography
-      // Section:Interests
-      .row
+      // Section:Records
+      section.row
         .col-md-12
-          .card.card-block
-            h2.card-title(style='color:#009688')
-              i.fa.fa-rocket.fa-fw
-              | Interests
-            ul.list-group(style='margin-top:15px;margin-bottom:15px;')
-              li.list-group-item Cloud & Parallel Computing
-              li.list-group-item Big Data Analysis and Management
-              li.list-group-item High-performance and Low-Power Real-Time Systems
-              li.list-group-item Mobile Embedded Systems and Network Security
-      // End :Interests
+          .card.card-block.text-xs-left(style="background-color: var(--brand-gray);")
+            .card-body
+                h3.card-title
+                  i.fas.fa-dumbbell
+                  | Records
+                div(style='height: 15px')
+                table.table.table-responsive.table-striped.table-hover.table-sm
+                    thead.thead-dark
+                        tr
+                            th(scope='col') Federation
+                            th(scope='col') Division
+                            th(scope='col') Equip
+                            th(scope='col') Level
+                            th(scope='col') Country
+                            th(scope='col') State
+                            th(scope='col') Event
+                            th(scope='col') Wt Cls
+                            th(scope='col') Lift Type
+                            th(scope='col') Total (lbs)/Reps
+                            th(scope='col') Date
+                            th(scope='col') Details
+                    tbody
+                        +recordsRow( 'WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII')
+                        +recordsRow( 'WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII')
+                        +recordsRow( 'WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII')
+                        +recordsRow( 'WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII')
+                        +recordsRow( 'WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII')
+                        +recordsRow( 'WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII')
+                        +recordsRow( 'WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII')
+                        
+
+      // End :Records
       // Section:Awards
       .row
         .col-md-12
