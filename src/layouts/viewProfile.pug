@@ -53,6 +53,13 @@ block head-content
         .label a{
             color: inherit;
         }
+
+        table, thead, tr, tbody, th, td {
+            text-align: center;
+        }
+        .table td {
+            text-align: center;
+        }
 block page-content
     header.header.bg-brand-red
       .container
@@ -138,9 +145,11 @@ block page-content
                             th(scope='col') Date
                             th(scope='col') Details
                     tbody
+                        tr.bg-danger: td(colspan="12") Current Records
                         +recordsRow( 'WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII')
                         +recordsRow( 'WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII')
-                        +recordsRow( 'WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII')
+                        +recordsRow( 'WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', 'NJ', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII')
+                        tr.bg-danger: td(colspan="12") Personal Best
                         +recordsRow( 'WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII')
                         +recordsRow( 'WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII')
                         +recordsRow( 'WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII')
