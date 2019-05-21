@@ -8,41 +8,95 @@ block page-content
     .container(style="background-color:lightgray;border-radius:.25rem;")
         h1 New Profile Registration
         .container
-            form(role="form")        
-                .form-group.form-row
-                    .col-form-label.form-control-label First Name
-                    .col-lg-5
+            form.needs-validation(role="form" novalidate)        
+                .form-row.form-group
+                    .col-lg-12
+                        label.col-form-label.form-control-label(for="firstName") Enter Your Name
                         .input-group.mb-3
                             .input-group-prepend
-                                span#basic-addon1.input-group-text: i.fas.fa-user
-                            input#firstName.form-control(type='text', placeholder='', aria-label='First Name' required)
-                    .col-form-label.form-control-label Last Name
-                    .col-lg-5
+                                span.input-group-text: i.fas.fa-user
+                            input#firstName.form-control(type='text', placeholder='First', aria-label='First Name' required)
+                            input#middleName.form-control(type='text', placeholder='M', aria-label='Middle Name' )
+                            input#lastName.form-control(type='text', placeholder='Last', aria-label='First Name' required)
+                .form-row
+                    .form-group.col-md-4
+                        label.col-form-label.form-control-label(for="birthYear") Birth Year
                         .input-group.mb-3
                             .input-group-prepend
-                                span#basic-addon1.input-group-text: i.fas.fa-user
-                            input#firstName.form-control(type='text', placeholder='', aria-label='First Name')
-                .form-group
-                    label(for='inputAddress') Address
-                    input#inputAddress.form-control(type='text', placeholder='1234 Main St')
-                .form-group
-                    label(for='inputAddress2') Address 2
-                    input#inputAddress2.form-control(type='text', placeholder='Apartment, studio, or floor')
+                                span.input-group-text: i.fas.fa-calendar
+                            input#birthYear.form-control(type='number', min="0", placeholder='', aria-label='Birth Year' required)
+                    .form-group.col-md-4
+                        label.col-form-label.form-control-label(for="gender") Gender
+                        .input-group.mb-3
+                            .input-group-prepend
+                                span.input-group-text: i.fas.fa-venus-mars
+                            select#gender.form-control(aria-label='Gender' required)
+                                option Male
+                                option Female
+                .form-row.form-group
+                    .col-lg-12
+                        label.col-form-label.form-control-label(for="sport") Sport
+                        .input-group.mb-3
+                            .input-group-prepend
+                                span.input-group-text: i.fas.fa-dumbbell
+                            select#sport.form-control(aria-label='sport' required)
+                                option Olympic Lifting
+                                option Powerlifting
+                //-- email and display
+                .form-row
+                    .form-group.col-md-8
+                        label.col-form-label.form-control-label(for="email") Email
+                        .input-group
+                            .input-group-prepend
+                                span.input-group-text: i.fas.fa-at
+                            input#email.form-control(type='email', min="0", placeholder='', aria-label='Email' required)
+                            .input-group-append
+                                span.input-group-text ...
+                    .form-group.col-md-4
+                        label.col-form-label.form-control-label(for="displayName") Display Name
+                        .input-group
+                            .input-group-prepend
+                                span.input-group-text: i.fas.fa-id-card
+                            input#displayName.form-control(type='text' aria-label="Display Name")
+
+                //- password and confirm
                 .form-row
                     .form-group.col-md-6
-                        label(for='inputCity') City
-                        input#inputCity.form-control(type='text')
-                    .form-group.col-md-4
-                        label(for='inputState') State
-                        select#inputState.form-control
-                            option(selected='') Choose...
-                            option ...
-                    .form-group.col-md-2
-                        label(for='inputZip') Zip
-                        input#inputZip.form-control(type='text')
-                .form-group
-                    .form-check
-                        input#gridCheck.form-check-input(type='checkbox')
-                        label.form-check-label(for='gridCheck')
-                            | Check me out
-                button.btn.btn-primary(type='submit') Sign in
+                        label.col-form-label.form-control-label(for="password") Password
+                        .input-group.mb-3
+                            .input-group-prepend
+                                span.input-group-text: i.fas.fa-key
+                            input#password.form-control(type='password', placeholder='Allowed characters: {A-Z a-z 0-9}; Length: 4-20;', aria-label='password' required)
+                    .form-group.col-md-6
+                        label.col-form-label.form-control-label(for="password") Confirm Password
+                        .input-group.mb-3
+                            .input-group-prepend
+                                span.input-group-text: i.fas.fa-key
+                            input#passwordConfirm.form-control(type='password', placeholder='', aria-label='password' required)
+                button.btn.btn-primary.btn-danger.mb-3(type='submit') Submit
+
+            script.
+                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                (function() {
+                    'use strict';
+
+                    let bYear = document.getElementById("birthYear");
+                    const curYear = ((new Date()).getFullYear());
+                    bYear.max = curYear;
+                    bYear.placeholder = curYear;
+
+                    window.addEventListener('load', function() {
+                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                        var forms = document.getElementsByClassName('needs-validation');
+                        // Loop over them and prevent submission
+                        var validation = Array.prototype.filter.call(forms, function(form) {
+                        form.addEventListener('submit', function(event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                        });
+                    }, false);
+                })();
