@@ -18,6 +18,7 @@
   "homepage": "https://github.com/rbucinell/whilift#readme",
   "devDependencies": {
     "gulp": "^4.0.0",
+    "gulp-cli": "^2.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-pug": "^4.0.1",
     "gulp-watch": "^5.0.1"
