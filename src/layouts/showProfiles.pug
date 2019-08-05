@@ -18,11 +18,19 @@ block page-content
                         each letter in ['A', 'B','C','D','E','F','G','H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
                             +pagnationLetter( letter )
             .row.justify-content-md-center
-                form.form-inline
-                    .form-group
-                        label.col-form-label.form-control-lg.text-light(for='lastNameSubstring') Last Name Search
-                        input#lastNameSubstring.form-control(type='text', pattern='.{3,}', required='', title='3 characters minimum', name='lastNameSubstring')
-                    button.btn.btn-danger(type='submit') Search
+              .form-inline
+                .form-group
+                  label.col-form-label.form-control-lg.text-light(for='lastNameSubstring') Last Name Search
+                  input#lastNameSubstring.form-control(type='text', pattern='.{3,}', required='', title='3 characters minimum', name='lastNameSubstring')
+                button#searchButton.btn.btn-danger(type='submit') Search
+                script.
+                  $('#searchButton').on('click', event => {
+                  let url = "getMinimalProfileData?lastNameSubstring=" + document.getElementById('lastNameSubstring').value;
+                  fetch( url )
+                  .then( data => { return data.json() })
+                  .then( response => {alert( JSON.stringify(response))});
+                  });
+
             .row.justify-content-md-center
                 article
                     ul.list-unstyled.list-group
