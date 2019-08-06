@@ -1,0 +1,36 @@
+extends partials/layout.pug
+
+mixin articleItem( articleTitle, articleAuthor, articleDate, articleUrl )
+    a.list-group-item.list-group-item-action(href=`${articleUrl}`)
+        .d-flex.w-100.justify-content-between
+            h5.mb-1 
+                |#{articleTitle}
+                small &nbsp;by #{articleAuthor}
+            small #{articleDate}
+
+
+block head-content
+    title Why I Lift - New Profile
+block page-content
+    //- https://codepen.io/juff03/pen/OXaXRG
+    //- https://www.mockplus.com/blog/post/bootstrap-form-template
+    //- https://getbootstrap.com/docs/4.0/examples/checkout/
+    .container(style="background-color:lightgray;border-radius:.25rem;")
+        h1 Latest Articles
+        .container        
+            .card
+                .card-body
+                    h5.card-title Missing link Crew from White Plains, New York
+                    h6.card-subtitle.mb-2.text-muted 12-9-2018
+                    p.card-text The World Natural Powerlifting Federation held their Sarge McCray Powerlifting championships At The Town Inn Hotel in Bordentown New Jersey. On December 9th 2018
+                    a.card-link(href="http://www.google.com" target="blank") Read More
+
+            h4 Top Stories
+            .list-group.list-group-flush
+                +articleItem( "2018 HoF Inductee: Artie Drechsler","Strength and Power Hall of Fame", "8/2/2019", "viewArticle.html?articleId=95")
+                +articleItem( "Seeing Through the Eyes of Faith","Bill Clark", "7/31/2018", "viewArticle.html?articleId=94")
+                +articleItem( "2018 HoF Inductee: David Laszewski","Strength and Power Hall of Fame", "07/18/2018", "viewArticle.html?articleId=93")
+                +articleItem( "2018 HoF Inductee: Craig Wolfley","Strength and Power Hall of Fame", "07/08/2018", "viewArticle.html?articleId=92")
+                +articleItem( "2018 HoF Inductee: Eric LeBlanc","Strength and Power Hall of Fame", "07/06/2018", "viewArticle.html?articleId=91")
+                +articleItem( "2018 HoF Inductee: Paul Dick","Strength and Power Hall of Fame", "07/05/2018", "viewArticle.html?articleId=90")
+                +articleItem( "2018 HoF Inductee: Lou Ferrigno","Strength and Power Hall of Fame", "07/05/2018", "viewArticle.html?articleId=89")
