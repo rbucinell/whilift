@@ -19,10 +19,19 @@ html
             }
 
     body.background-image.text-center(style="background-blend-mode: soft-light;")
-        .cover-container.d-flex.h-100.p-3.mx-auto.flex-column.align-self-center
-            main.cover.inner(role="main")
-                h1.cover-heading WHY I 
-                    span.text-danger LIFT 
-                    |.COM
-                p.lead
-                    | Coming Soon
+		.container-fluid.p-3
+			header.header
+				.container-fluid
+					.row
+						div
+							.logo
+								a(href="index.html")
+									img(src="img/logo.png" alt="Logo" style="")
+			article.banner-text-wrap
+				.container-fluid
+					.row
+						.col-lg-12
+							h3.banner-text.text-uppercase
+								span PUT YOUR IRON GAME
+								span ON DISPLAY
+			h1.banner-text.text-uppercase Coming Soon
