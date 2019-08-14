@@ -24,12 +24,35 @@ block page-content
                   input#lastNameSubstring.form-control(type='text', pattern='.{3,}', required='', title='3 characters minimum', name='lastNameSubstring')
                 button#searchButton.btn.btn-danger(type='submit') Search
                 script.
-                  $('#searchButton').on('click', event => {
-                  let url = "getMinimalProfileData?lastNameSubstring=" + document.getElementById('lastNameSubstring').value;
-                  fetch( url )
-                  .then( data => { return data.json() })
-                  .then( response => {alert( JSON.stringify(response))});
-                  });
+                    $('#searchButton').on('click', event => {
+                        let url = "getMinimalProfileData?lastNameSubstring=" + document.getElementById('lastNameSubstring').value;
+                        fetch( url )
+                            .then( data => {return data.json(); })
+                            .then( response => {                                
+                                let baseURL = window.location.href.substring( 0,window.location.href.indexOf('showProfiles'));
+
+                                if( response.length == 0)
+                                {
+                                    $("#noResultsModal").modal('show')
+                                }
+                                else if( response.length == 1)
+                                {
+                                    window.location.href =  baseURL + 'viewProfile?whyiliftId=' + response[0].ipowerliftId;
+                                }
+                                else
+                                {
+                                    $("#searchResultList").empty();
+                                    response.forEach( result => {
+                                        let id = result.ipowerliftId;
+                                        let name = result.lastNameFirstName;
+                                        let link = baseURL + 'viewProfile?whyiliftId=' + id;
+                                        let html = '<a class="list-group-item.list-group-item-action" href="' + url + '">' + name + '</a>';
+                                        $("#searchResultList").append(html);
+                                    });
+                                    $("#searchResultsModal").modal('show');
+                                }
+                        });
+                    });
 
             .row.justify-content-md-center
                 article
@@ -63,3 +86,30 @@ block page-content
                 //-       .card-body
                 //-            h5.card-title Advertisement
                 //-            p.card-text Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tenetur, consectetur!
+            #searchResultsModal.modal.fade(tabindex="-1" role="dialog" aria-labelledby="searchResultsModalLabel" aria-hidden="true")
+                .modal-dialog(role="document")
+                    .modal-content
+                        .modal-header
+                            h5#searchResultsModalLabel.modal-title Search Results
+                            button.close(type="button" data-dismiss="modal" aria-label="Close")
+                            span(aria-hidden="true") ×
+                        #searchResultBody.modal-body
+                            #searchResultList.list-group
+                                a.list-group-item.list-group-item-action.active(href="#")
+                                    | Cras justo odio
+                                a.list-group-item.list-group-item-action(href="#") Dapibus ac facilisis in
+                                a.list-group-item.list-group-item-action(href="#") Morbi leo risus
+                                a.list-group-item.list-group-item-action(href="#") Porta ac consectetur ac
+                                a.list-group-item.list-group-item-action.disabled(href="#") Vestibulum at eros
+                        .modal-footer
+                            button.btn.btn-secondary(type="button" data-dismiss="modal") Close
+            #noResultsModal.modal.fade(tabindex="-2" role="dialog" aria-labelledby="noResultsModalLabel" aria-hidden="true")
+                .modal-dialog(role="document")
+                    .modal-content
+                        .modal-header
+                            h5#noResultsModalLabel.modal-title Search Results
+                            button.close(type="button" data-dismiss="modal" aria-label="Close")
+                            span(aria-hidden="true") ×
+                        .modal-body
+                            p No Results Found
+
