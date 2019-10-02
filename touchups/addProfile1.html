@@ -14,8 +14,9 @@
         
         
         <title>New Profile Registration</title>
-        <link type="text/css" href="atlas/css/ui-lightness/jquery-ui-1.8.18.custom.css" rel="stylesheet">
-        <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" src="atlas/js/jquery-1.11.2.min.js"></script>
+        <link type="text/css" href="atlas/css/ui-lightness/jquery-ui-1.8.18.custom.css">
+        <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script>
+        <script type="text/javascript" src="atlas/js/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" src="atlas/js/jquery-ui-1.8.18.custom.min.js"></script>
         <script type="text/javascript" src="atlas/js/jquery.dateFormat-1.0.js"></script>
         <script>
@@ -303,10 +304,28 @@
                                     <div class="input-group-prepend">
                                         <span class="input-group-text"><i class="fas fa-id-card"></i></span>
                                     </div>
-                                    <input id="user.username" name="user.username" class="form-control" type="text" value="" placeholder="">
+                                    <script>
+                                        function checkUserName()
+                                        {
+                                            let username = document.getElementById('user\.username').value;
+                                            let url = 'http://172.100.199.196/atlas/userReg/ajax/userNameExists?userName='+username;
+                                            fetch( url, { method: 'POST' })
+                                            .then( response => response.text())
+                                            .then( data =>{
+                                                let exists = data === "true";
+                                                document.getElementById('usernameExists').hidden = !exists;
+                                                document.getElementById('usernameExistsIcon').classList = exists ? 'text-danger fas fa-times' : 'text-success fas fa-check';
+                                            })
+                                        }
+                                    </script>
+                                    <input id="user.username" name="user.username" class="form-control" type="text" value="" placeholder="" onblur="checkUserName()">
+                                    <div class="input-group-append">
+                                        <span class="input-group-text"><i id="usernameExistsIcon" class="fas fa-ellipsis-h"></i></span>
+                                    </div>
                                 </div>
                                 <span class="text-muted col-form-label-sm">Allowed characters: lowercase {a-z 0-9 _}; Length: 3-20</span>
                             </div>
+                            <span id="usernameExists" class="text-danger" hidden>Username already exsits</span>
                         </div>
 
                         <div class="form-group row">
