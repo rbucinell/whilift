@@ -79,33 +79,31 @@
                         <div class="form-row d-flex justify-content-between">
                                                        
                             <!-- Height -->
-                            <div class="form-group col-md-3 col-sm-6">
+                            <div class="form-group col-md-4 col-sm-6">
                                 <label for="inputHeight">Height</label>
                                 <div class="input-group">
                                         <div class="input-group-prepend"> <span class="input-group-text"><i class="fas fa-ruler-vertical"></i></span> </div>
                                     <input type="number" class="form-control" id="inputHeight" value="42" min="0">
                                     <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">in</button>
-                                        <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="#">in</a>
-                                            <a class="dropdown-item" href="#">cm</a>
-                                        </div>
+                                        <select id="person.heightUnitsCode" name="person.heightUnitsCode" style="border: 1px solid #ced4da; border-radius: .25rem;">
+                                            <option value="" selected="" disabled="">--- Select ---</option>
+                                            <option value="1">Inches</option><option value="2">Centimeters</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- Weight -->
-                            <div class="form-group col-md-3 col-sm-6">
+                            <div class="form-group col-md-4 col-sm-6">
                                 <label for="inputWeight">Weight</label>
                                 <div class="input-group">
                                         <div class="input-group-prepend"> <span class="input-group-text"><i class="fas fa-weight"></i></span> </div>
                                     <input type="number" class="form-control" id="inputWeight" min="0" value="120">
                                     <div class="input-group-append">
-                                        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">lbs</button>
-                                        <div class="dropdown-menu">                                            
-                                            <a class="dropdown-item" href="#">lbs</a>
-                                            <a class="dropdown-item" href="#">kg</a>
-                                        </div>
+                                        <select id="person.weightUnitsCode" name="person.weightUnitsCode" style="border: 1px solid #ced4da; border-radius: .25rem;">
+                                            <option value="" selected="" disabled="">--- Select ---</option>
+                                            <option value="1">Pounds</option><option value="2">Kilograms</option>
+                                        </select>
                                     </div>
                                 </div>
                             </div>
@@ -218,32 +216,46 @@
                         </div>
                         <div class="form-row">
                             <ul class="list-group list-group-flush col-sm-12">
-                                <li class="media list-group-item d-flex justify-content-between align-items-center bg-transparent">
+                                <li class="media list-group-item d-flex justify-content-between align-items-center bg-transparent">                                    
                                     <img class="mr-3" src="atlas\resources\images\profiles\1000674\thumb\profilepic_0.jpg" alt="Image 1">
+                                    
                                     <div class="media-body">
-                                    <textarea id="inputImage01" class="form-control">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</textarea>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="primaryImgRadioOptions" id="primaryImgRadio1" value="img1">
+                                            <label class="form-check-label" for="inlineRadio1">Make Primary</label>
+                                            <button type="button" class=" btn btn-sm btn-outline-dark ml-3" onclick="alert('put code here');" aria-label="Remove Image" title="Remove Image">
+                                                    <i class="fas fa-times"></i>
+                                                    <span class="align-right">Delete</span>
+                                            </button>
+                                        </div>
                                     </div>
-                                    <button type="button" class="close ml-1" aria-label="Close" data-toggle="tooltip" data-placement="top" title="Remove Image">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                                    
                                 </li>
                                 <li class="media list-group-item d-flex justify-content-between align-items-center bg-transparent">
-                                    <img class="mr-3" src="atlas\resources\images\profiles\1000674\thumb\profilepic_4372.jpg" alt="Image 1">
+                                    <img class="mr-3" src="atlas\resources\images\profiles\1000674\thumb\profilepic_4372.jpg" alt="Image 2">
                                     <div class="media-body">
-                                        <textarea id="inputImage02" class="form-control">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</textarea>
-                                    </div>
-                                    <button type="button" class="close ml-1" aria-label="Close" data-toggle="tooltip" data-placement="top" title="Remove Image">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="primaryImgRadioOptions" id="primaryImgRadio2" value="img2">
+                                                <label class="form-check-label" for="inlineRadio2">Make Primary</label>
+                                                <button type="button" class=" btn btn-sm btn-outline-dark ml-3" onclick="alert('put code here');" aria-label="Remove Image" title="Remove Image">
+                                                        <i class="fas fa-times"></i>
+                                                        <span class="align-right">Delete</span>
+                                                </button>
+                                            </div>
+                                        </div>
                                 </li>
                                 <li class="media list-group-item d-flex justify-content-between align-items-center bg-transparent">
-                                    <img class="mr-3" src="atlas\resources\images\profiles\1000674\thumb\profilepic_4373.jpg" alt="Image 1">
+                                    <img class="mr-3" src="atlas\resources\images\profiles\1000674\thumb\profilepic_4373.jpg" alt="Image 3">
                                     <div class="media-body">
-                                        <textarea id="inputImage03" class="form-control">Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin.</textarea>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio" name="primaryImgRadioOptions" id="primaryImgRadio3" value="img3">
+                                            <label class="form-check-label" for="inlineRadio3">Make Primary</label>
+                                            <button type="button" class=" btn btn-sm btn-outline-dark ml-3" onclick="alert('put code here');" aria-label="Remove Image" title="Remove Image">
+                                                    <i class="fas fa-times"></i>
+                                                    <span class="align-right">Delete</span>
+                                            </button>
+                                        </div>
                                     </div>
-                                    <button type="button" class="close ml-1" aria-label="Close" data-toggle="tooltip" data-placement="top" title="Remove Image">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center bg-transparent">
                                     <div class="input-group">
@@ -315,8 +327,9 @@
                     <script>
                         //This script will update the dropdown values for in/cm and lbs/kg
                         Array.prototype.forEach.call( document.getElementsByClassName("dropdown-item"), el => {
-                            el.addEventListener( 'click', event => el.parentElement.parentElement.firstElementChild.innerText = el.innerText );
-                        });
+                            let btn = el.parentElement.parentElement.firstElementChild;
+                            btn.innerText = el.innerText;
+                         });
                     </script>
                 </div>
             </div>
