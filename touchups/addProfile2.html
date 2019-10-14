@@ -12,197 +12,12 @@
         <link rel="stylesheet" href="atlas/css/responsive.css">
         
         
-        <title>New Profile Registration</title>
+        <title>New Profile Registration - Step 3</title>
         <link type="text/css" href="atlas/css/ui-lightness/jquery-ui-1.8.18.custom.css" rel="stylesheet">
         <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" src="atlas/js/jquery-1.11.2.min.js"></script>
         <script type="text/javascript" src="atlas/js/jquery-ui-1.8.18.custom.min.js"></script>
         <script type="text/javascript" src="atlas/js/jquery.dateFormat-1.0.js"></script>
-        <script>
-        
-            // jQuery plugin to prevent double submission of forms
-            jQuery.fn.preventDoubleSubmission = function() {
-                $(this).bind('submit', function(e) {
-        
-                    if ($(this).data('submitted') === true) {
-                        // Previously submitted - don't submit again
-                        e.preventDefault();
-                    } else {
-                        // Mark this so that the next submit can be ignored
-                        $(this).data('submitted', true);
-                    }
-                });
-        
-                // Keep chainability
-                return $(this);
-            };
-        
-            $('form').preventDoubleSubmission();
-        
-            function checkUserName() {
-                $(function() {
-                    // Call a URL and pass one argument
-                    // Also pass a call back function
-                    // See http://api.jquery.com/jQuery.post/
-                    // See http://api.jquery.com/jQuery.ajax/
-                    // You might find a warning in Firefox: Warning: Unexpected token in attribute selector: '!' 
-                    // See http://bugs.jquery.com/ticket/7535
-                    $
-                            .post(
-                                    "/atlas/userReg/ajax/userNameExists",
-                                    {
-                                        userName : $("#user\\.username").val()
-                                    }, function(data) {
-                                        // data contains the result
-                                        // Assign result to the sum id
-                                        $("#userNameExists").replaceWith(
-                                                '<span id="userNameExists">' + data
-                                                        + '</span>');
-                                    });
-                });
-            }
-        
-            function checkEmail() {
-                $(function() {
-                    // Call a URL and pass one argument
-                    // Also pass a call back function
-                    // See http://api.jquery.com/jQuery.post/
-                    // See http://api.jquery.com/jQuery.ajax/
-                    // You might find a warning in Firefox: Warning: Unexpected token in attribute selector: '!' 
-                    // See http://bugs.jquery.com/ticket/7535
-                    $.post("/atlas/userReg/ajax/emailExists",
-                        {
-                        email : $("#email\\.email").val()
-                        }, function(data) {
-                        // data contains the result
-                        // Assign result to the sum id
-                        $("#emailExists").replaceWith(
-                            '<span id="emailExists">' + data
-                            + '</span>');
-                        });
-                });
-            }
-            
-            function validate1() {
-                var isOK = true;
-                var emailAddr = document.getElementById("email.email");
-                if (emailAddr.value=="") {
-                    alert('Email must have a value');
-                    return false;
-                }
-        
-                
-                return(isOK);
-            }
-        
-            function validate2() {
-                var isOK = true;
-                var firstName = document.getElementById("person.firstName");
-                if (firstName.value=="") {
-                    alert('First Name must have a value');
-                    return false;
-                }
-                var lastName = document.getElementById("person.lastName");
-                if (lastName.value=="") {
-                    alert('Last Name must have a value');
-                    return false;
-                }	    
-                var birthYr = document.getElementById("person.birthYear");
-                if (birthYr.selectedIndex=="0") {
-                    alert('Please select a Birth Year.');
-                    return false;
-                } 
-                var userName = document.getElementById("user.username");
-                if (userName.value=="") {
-                    alert('User Name must have a value');
-                    return false;
-                }
-                var passwd = document.getElementById("user.password");
-                if (passwd.value=="") {
-                    alert('Password must have a value');
-                    return false;
-                }	 
-                var cpasswd = document.getElementById("confirmPassword");
-                if (cpasswd.value=="") {
-                    alert('Comfirm Password must have a value');
-                    return false;
-                }	    
-                return(isOK);
-            }
-        
-            function validate3() {
-                var isOK = true;
-                var experience = document.getElementById("lifter.experienceLifting");
-                if (experience.value=="") {
-                    alert('Lifter Experience must have a value');
-                    return false;
-                }
-                var federation = document.getElementById("lifter.federationCode");
-                if (federation.selectedIndex=="0") {
-                    alert('Please select a Federation.');
-                    return false;
-                } 	    
-                var lastName = document.getElementById("person.lastName");
-                if (lastName.value=="") {
-                    alert('Last Name must have a value');
-                    return false;
-                }	    
-                var birthYr = document.getElementById("person.birthYear");
-                if (birthYr.selectedIndex=="0") {
-                    alert('Please select a Birth Year.');
-                    return false;
-                } 
-                var weight = document.getElementById("person.weight");
-        
-                var height = document.getElementById("person.height");
-                if (height.value=="") {
-                    alert('Lifter Height must have a value');
-                    return false;
-                }
-                var heightUnits = document.getElementById("person.heightUnitsCode");
-                if (heightUnits.selectedIndex=="0") {
-                    alert('Please select a Lifter Height Units Code.');
-                    return false;
-                }	
-        
-                if (weight.value=="") {
-                    alert('Lifter Weight must have a value');
-                    return false;
-                }
-                var weightUnits = document.getElementById("person.weightUnitsCode");
-                if (weightUnits.selectedIndex=="0") {
-                    alert('Please select a Lifter Weight Units Code.');
-                    return false;
-                } 	    
-                
-                //START BELOW STEP 3 PROCESSING
-                var country = document.getElementById("person.nationality");
-                if (country.selectedIndex=="0") {
-                    alert('Please select a Country.');
-                    return false;
-                } 	    
-                 
-                var bio = document.getElementById("lifter.bio");
-                if (bio.value=="") {
-                    alert('Lifter Bio must have a value');
-                    return false;
-                }	    
-                
-                if( document.getElementById("pictureExtList[0].pictureFile").files.length == 0 ){
-                    alert('Please Select one primary picture for your Profile');
-                    return false;
-                }
-        
-                
-                return(isOK);
-            }
-        
-            
-            function submitForm() {
-                var form = document.getElementById("newProfileMulti");
-                    form.submit();
-            }	
-            
-        </script>
+        <script type="text/javascript" src="atlas/js/profileform.js"></script>
         
             <script type="text/javascript">
         
@@ -398,7 +213,7 @@
                                             </div>
                                         </div>
                                         </div>
-                                    <button class="btn btn-primary btn-danger mb-3" type="button" onclick="if(validate1()){submitForm();}">Submit</button>
+                                    <button class="btn btn-primary btn-danger mb-3" type="button" onclick="if(validate3()){submitForm();}">Submit</button>
                                 </div>
                             </div>
                         </div>
