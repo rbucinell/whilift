@@ -198,7 +198,6 @@ background-image: url('../images/banner.jpg');
     display: block;
 }
 
-
 .main-menu li a:hover {
     color: #d53b37;
 }
@@ -208,7 +207,7 @@ background-image: url('../images/banner.jpg');
     background: #d53b37;
 }
 .mission_table {
-	align: right;
+	text-align: right;
 }
 .mission_td {
     font-weight: bold;
