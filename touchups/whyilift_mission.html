@@ -14,10 +14,10 @@
 
 
 <!--================== Style css ==================-->
-<link href="/atlas/css/styleWhyilift.css" rel="stylesheet">
+<link href="atlas/css/styleWhyilift.css" rel="stylesheet">
 
 <!--================== Responsive ==================-->
-<link href="/atlas/css/responsive.css" rel="stylesheet">
+<link href="atlas/css/responsive.css" rel="stylesheet">
 
 
 </head>
@@ -31,8 +31,8 @@
 		<div class="row">
 			<div class="col-sm-4">
 				<div class="logo">
-					<a href="/atlas/home"> <img
-						src="/atlas/images/logo.png"
+					<a href="atlas/home"> <img
+						src="atlas/images/logo.png"
 						alt="Logo">
 					</a>
 				</div>
@@ -41,27 +41,27 @@
 					<form class="form-inline nav ml-auto w-100 justify-content-end">
 					<sec:authorize access="hasRole('ROLE_ADMIN')">
 				       <a class="btn btn-outline-light my-2 my-sm-0" id="login-btn"
-							href="/atlas/oldhome" role="button">Old Home</a>	
+							href="atlas/oldhome" role="button">Old Home</a>	
 					</sec:authorize>							
 					<sec:authorize access="isAnonymous()">
 				       <a class="btn btn-outline-light my-2 my-sm-0" id="login-btn"
-							href="/atlas/auth/login" role="button">Login</a>	
+							href="atlas/auth/login" role="button">Login</a>	
 					</sec:authorize>
 					<sec:authorize access="isAuthenticated()">
 			 
-					 <a class="btn btn-danger my-2 my-sm-0" href="/atlas/userReg/viewUserReg?whyiliftId=&">	
+					 <a class="btn btn-danger my-2 my-sm-0" href="atlas/userReg/viewUserReg?whyiliftId=&">	
 					 	
 					</a>
 						&nbsp;
-						<a class="btn btn-danger my-2 my-sm-0" href="/atlas/logout">Logout</a>&nbsp;
+						<a class="btn btn-danger my-2 my-sm-0" href="atlas/logout">Logout</a>&nbsp;
 		
 					</sec:authorize>
 					<sec:authorize access="isAnonymous()">
 						<a class="btn btn-danger my-2 my-sm-0" id="create-profile-btn"
-							href="/atlas/profile/newProfile" role="button">Create Profile</a>
+							href="atlas/profile/newProfile" role="button">Create Profile</a>
 					</sec:authorize>		
 					<sec:authorize access="isAuthenticated()">
-					    <a class="btn btn-danger my-2 my-sm-0" href="/atlas/profile/viewPersonalProfile?whyiliftId=&">
+					    <a class="btn btn-danger my-2 my-sm-0" href="atlas/profile/viewPersonalProfile?whyiliftId=&">
 					    My Profile</a>
 					</sec:authorize>
 					</form>
@@ -82,13 +82,13 @@
                             <div class="col-lg-12">
                                 <div class="main-menu">
                                     <ul>
-                                        <li><a href="/atlas/home">HOME</a></li>
-                                        <li><a href="/atlas/whyilift_mission">OUR MISSION</a></li>
-                                        <li><a href="/atlas/article/viewArticle?articleId=30&">SPOTLIGHT</a></li>
-                                        <li><a href="/atlas/article/indexLatest">ARTICLES</a></li>
-                                        <li><a href="/atlas/article/viewArticle?articleId=66&">NUTRITION</a></li>
-                                        <li><a href="/atlas/profile/showProfiles?lastNameSubString=initial">PROFILES</a></li>
-                                        <li><a href="/atlas/event/indexEvent">RESULTS</a></li>
+                                        <li><a href="atlas/home">HOME</a></li>
+                                        <li><a href="atlas/whyilift_mission">OUR MISSION</a></li>
+                                        <li><a href="atlas/article/viewArticle?articleId=30&">SPOTLIGHT</a></li>
+                                        <li><a href="atlas/article/indexLatest">ARTICLES</a></li>
+                                        <li><a href="atlas/article/viewArticle?articleId=66&">NUTRITION</a></li>
+                                        <li><a href="atlas/profile/showProfiles?lastNameSubString=initial">PROFILES</a></li>
+                                        <li><a href="atlas/event/indexEvent">RESULTS</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -107,9 +107,6 @@
 				<h3 class="banner-text text-uppercase">
 					<span>PUT YOUR IRON GAME</span> <span>ON DISPLAY</span>
 				</h3>
-				<div class="goto-next">
-					<i class="fa fa-angle-down"></i>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -154,14 +151,14 @@
 	
 <!--================== Jquery js ==================-->
 <script
-	src="/atlas/js/whyilift/jquery.min.js"></script>
+	src="atlas/js/whyilift/jquery.min.js"></script>
 
 <!--================== bootstrap js ==================-->
 <script
-	src="/atlas/js/whyilift/bootstrap.min.js"></script>
+	src="atlas/js/whyilift/bootstrap.min.js"></script>
 
 <!--================== Main js ==================-->
-<script src="/atlas/js/whyilift/main.js"></script>
+<script src="atlas/js/whyilift/main.js"></script>
 
 </body>
 </html>
