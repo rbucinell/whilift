@@ -211,7 +211,8 @@ background-image: url('../images/banner.jpg');
 	align: right;
 }
 .mission_td {
-	font-weight: bold; 
-	align: right; 
+	font-weight: bold;
+	text-align: right;
 	text-align: center;
 }
+.error{ color: #800000; font-style: italic; font-weight: bold;}
