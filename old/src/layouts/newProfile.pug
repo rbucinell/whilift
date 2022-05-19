@@ -1,0 +1,122 @@
+extends partials/layout.pug
+
+mixin simpleformgrp( size, _id, _type, icon, display, req="", _placeholder="" )
+    div(class=`form-group col-md-${size}`)
+        label.col-form-label.form-control-label(for="birthYear") #{display}
+        .input-group
+            .input-group-prepend
+                span.input-group-text: i(class=`fas fa-${icon}`)
+            input.form-control(id=_id, type=_type, placeholder=_placeholder, aria-label=display required=req)
+
+block head-content
+    title Why I Lift - New Profile
+block page-content
+    //- https://codepen.io/juff03/pen/OXaXRG
+    //- https://www.mockplus.com/blog/post/bootstrap-form-template
+    //- https://getbootstrap.com/docs/4.0/examples/checkout/
+    .container(style="background-color:lightgray;border-radius:.25rem;")
+        h1 New Profile Registration
+        .container
+            form.needs-validation(role="form" novalidate)        
+                .form-row.form-group
+                    .col-lg-12
+                        label.col-form-label.form-control-label(for="firstName") Enter Your Name
+                        .input-group
+                            .input-group-prepend
+                                span.input-group-text: i.fas.fa-user
+                            input#firstName.form-control(type='text', placeholder='First', aria-label='First Name' required)
+                            input#middleName.form-control(type='text', placeholder='M', aria-label='Middle Name' )
+                            input#lastName.form-control(type='text', placeholder='Last', aria-label='First Name' required)
+                .form-row
+                    
+                    +simpleformgrp(3, 'birthYear', 'number', 'calendar', 'Birth Year', true, "" )
+                    .form-group.col-md-3
+                        label.col-form-label.form-control-label(for="gender") Gender
+                        .input-group
+                            .input-group-prepend
+                                span.input-group-text: i.fas.fa-venus-mars
+                            select#gender.form-control(aria-label='Gender' required)
+                                option Male
+                                option Female
+                    +simpleformgrp(3, 'sport', 'number', 'calendar', 'Birth Year', true, "" )
+                    .form-group.col-md-6
+                        label.col-form-label.form-control-label(for="sport") Sport
+                        .input-group
+                            .input-group-prepend
+                                span.input-group-text: i.fas.fa-dumbbell
+                            select#sport.form-control(aria-label='sport' required)
+                                option Olympic Lifting
+                                option Powerlifting
+                                
+                //-- email and display
+                .form-row
+                    .form-group.col-md-6
+                        label.col-form-label.form-control-label(for="email") Email
+                        .input-group
+                            .input-group-prepend
+                                span.input-group-text: i.fas.fa-at
+                            input#email.form-control(type='email', min="0", placeholder='', aria-label='Email' required)
+                            .input-group-append
+                                span.input-group-text ...
+                    .form-group.col-md-6
+                        label.col-form-label.form-control-label(for="username") Username
+                        .input-group
+                            .input-group-prepend
+                                span.input-group-text: i.fas.fa-id-card
+                            input#username.form-control(type='text' aria-label="User Name" required)
+
+                //- password and confirm
+                .form-row
+                    .form-group.col-md-6
+                        label.col-form-label.form-control-label(for="password") Password
+                        .input-group
+                            .input-group-prepend
+                                span.input-group-text: i.fas.fa-key
+                            input#password.form-control(type='password', placeholder='Allowed characters: {A-Z a-z 0-9}; Length: 4-20;', aria-label='password' required)
+                    .form-group.col-md-6
+                        label.col-form-label.form-control-label(for="password") Confirm Password
+                        .input-group
+                            .input-group-prepend
+                                span.input-group-text: i.fas.fa-key
+                            input#passwordConfirm.form-control(type='password', placeholder='', aria-label='password' required)
+                .form-row.row.justify-content-between.mt-3
+                    .form-check
+                        input#tosCheckbox.form-check-input(type="checkbox" required)
+                        label.form-check-label(for="tosCheckbox") I agree to the 
+                            a(href="#" data-target="#tosModal", data-toggle="modal") terms and conditions
+                            
+                    button.btn.btn-primary.btn-danger.mb-3(type='submit') Submit
+                #tosModal.modal.fade(role="dialog", tabindex="-1")
+                    .modal-dialog.modal-dialog-centered(role="document")
+                        .modal-content
+                            .modal-header
+                                h5.modal-title Terms of Service
+                                button.close(type="button", data-dismiss="modal" aria-label="close")
+                                    span(aria-hidden="true") &times;
+                            .modal-body
+                                p I hereby grant permission to WhyILift.com to use my photographs and video links submitted for creating my profile for web, print and media publications without further consideration, and I acknowledge that WhyILift.com will treat the photographs and video links at its discretion. I also acknowledge that once my photos and links have been released to WhyILift.com or the affiliated web publications, the images can be downloaded by any computer user. I am also agreeing that I am at least 18 years of age and own all rights to the photos and videos links that I have submitted. Therefore, I agree to indemnify and hold harmless from any claims WhyILift.com
+            script.
+                // Example starter JavaScript for disabling form submissions if there are invalid fields
+                (function() {
+                    'use strict';
+
+                    let bYear = document.getElementById("birthYear");
+                    const curYear = ((new Date()).getFullYear());
+                    bYear.max = curYear;
+                    bYear.placeholder = curYear;
+
+                    window.addEventListener('load', function() {
+                        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                        var forms = document.getElementsByClassName('needs-validation');
+                        // Loop over them and prevent submission
+                        var validation = Array.prototype.filter.call(forms, function(form) {
+                        form.addEventListener('submit', function(event) {
+                            if (form.checkValidity() === false) {
+                                event.preventDefault();
+                                event.stopPropagation();
+                            }
+                            form.classList.add('was-validated');
+                        }, false);
+                        });
+                    }, false);
+                })();

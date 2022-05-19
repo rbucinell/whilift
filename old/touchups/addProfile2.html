@@ -1,0 +1,243 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="icon" href="atlas/images/favicon.ico">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="atlas/css/normalize.css">
+        <link rel="stylesheet" href="atlas/css/whyilift.css">
+        <link rel="stylesheet" href="atlas/css/styleWhyilift.css">
+        <link rel="stylesheet" href="atlas/css/responsive.css">
+        
+        
+        <title>New Profile Registration - Step 3</title>
+        <link type="text/css" href="atlas/css/ui-lightness/jquery-ui-1.8.18.custom.css" rel="stylesheet">
+        <script type="text/javascript" async="" src="http://www.google-analytics.com/ga.js"></script><script type="text/javascript" src="atlas/js/jquery-1.11.2.min.js"></script>
+        <script type="text/javascript" src="atlas/js/jquery-ui-1.8.18.custom.min.js"></script>
+        <script type="text/javascript" src="atlas/js/jquery.dateFormat-1.0.js"></script>
+        <script type="text/javascript" src="atlas/js/profileform.js"></script>
+        
+            <script type="text/javascript">
+        
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-33290596-1']);
+          _gaq.push(['_trackPageview']);
+        
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        
+        </script>
+        
+        
+    </head>
+    <body class="background-image">
+        
+        <nav class="navbar navbar-expand-lg navbar-dark bg-brand-black sticky-top">
+            <a class="navbar-brand d-flex w-50 mr-auto" href="atlas/home"> <img src="atlas/images/logo.png" alt="Why I lift logo" width="100" height="45"></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav-links">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse w-100" id="main-nav-links">
+                <ul class="navbar-nav w-100 justify-content-center">
+                    <li class="nav-item main-nav-item active"><a class="nav-link" href="atlas/home">Home</a></li>
+                    <li class="nav-item main-nav-item"><a class="nav-link" href="atlas/profile/showProfiles?lastNameSubString=initial">Profiles</a></li>
+                    <li class="nav-item main-nav-item"><a class="nav-link" href="https://ipowerliftnet.zenfolio.com/recent.html" target="_blank">Pictures</a></li>
+                    <li class="nav-item main-nav-item"><a class="nav-link" href="atlas/video/premiumListAll">Videos</a></li>
+                    <li class="nav-item main-nav-item"><a class="nav-link" href="atlas/whyilift_mission">Mission</a></li>
+                    <li class="nav-item main-nav-item"><a class="nav-link" href="atlas/article/viewArticle?articleId=66&amp;">Nutrition</a></li>
+                </ul>
+                <form class="form-inline nav ml-auto w-100 justify-content-end">
+                    <a class="btn btn-outline-light my-2 my-sm-0" id="login-btn" href="atlas/auth/login" role="button">Login</a>
+                    <a class="btn btn-danger my-2 my-sm-0" id="create-profile-btn" href="atlas/profile/newProfile" role="button">Create Profile</a>
+                </form>
+            </div>
+        </nav>
+    
+        <main role="main" class="container">
+            <div class="card-footer mb-3 mt-3">
+                <div class="card-header bg-brand-red">
+                    <h2>New Profile Registration <small class="font-weight-light lead">Step: 3 of 3</small></h2>
+                </div>
+
+                <div class="card-body" style="background-color: lightgray;">
+                    <form id="newProfileMulti" class="needs-validation" action="/atlas/profile/addProfile3" method="POST" enctype="multipart/form-data">
+
+                        <!-- STEP 1 show form is step 1 else hidden fields if not step 1 -->    
+                        <input id="lifter.sport" name="lifter.sport" type="hidden" value="Olympic Lifting">
+                        <input id="email.emailId" name="email.emailId" type="hidden" value="">
+                        <input id="email.contactId" name="email.contactId" type="hidden" value="">
+                        <input id="email.emailClassType" name="email.emailClassType" type="hidden" value="">
+                        <input id="currentEmail" name="currentEmail" type="hidden" value="">
+                        <input id="email.email" name="email.email" type="hidden" value="a@b.com">
+                        <input id="person.gender" name="person.gender" type="hidden" value="1">
+                        <!-- END STEP 1 -->
+                        <!-- START STEP 2 -->
+                        <input id="ipowerliftId" name="ipowerliftId" type="hidden" value="">
+                        <input id="person.ipowerliftId" name="person.ipowerliftId" type="hidden" value="">
+                        <input id="person.contactId" name="person.contactId" type="hidden" value="">
+                        <input id="person.firstName" name="person.firstName" type="hidden" value="a">
+                        <input id="person.lastName" name="person.lastName" type="hidden" value="c">
+                        <input id="person.middleName" name="person.middleName" type="hidden" value="b">
+                        <input id="person.birthYear" name="person.birthYear" type="hidden" value="2016">
+                        <input id="user.ipowerliftId" name="user.ipowerliftId" type="hidden" value="">
+                        <input id="user.username" name="user.username" type="hidden" value="abc">
+                        <input id="user.password" name="user.password" type="hidden" value="abc">
+                        <input id="confirmPassword" name="confirmPassword" type="hidden" value="abc">
+                        <input id="contact.contactId" name="contact.contactId" type="hidden" value="">                            
+                        <!--  END STEP 2 -->
+
+                        <div class="form-group row">
+                            <label class="col-md-3 col-sm-6 col-form-label text-md-right" for="yearsLifting">Years Lifting Experience</label>
+                            <div class="col-lg-2 col-md-3 col-sm-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-clock"></i></span></div>
+                                    <input id="lifter.experienceLifting"    name="lifter.experienceLifting" class="form-control" type="number" min="0" max="99">
+                                </div>
+                                <input id="lifter.activeCode" name="lifter.activeCode" type="hidden" value="">
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-3 col-sm-6 col-form-label text-md-right" for="Federation">Lifting Federation</label>
+                            <div class="col-md-4 col-sm-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend"><span class="input-group-text"><i class="fab fa-trade-federation"></i></span></div>
+                                    <select id="lifter.federationCode" name="lifter.federationCode" class="form-control">
+                                        <option value="" selected disabled>--- Select ---</option>
+                                        <option value="1">WNPF</option><option value="9">IWF</option><option value="11">Team USA Weightlifting</option><option value="10">USA Weight Lifting</option><option value="8">No Federation / Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-3 col-sm-6 col-form-label text-md-right" for="person.height">Height</label>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend"> <span class="input-group-text"><i class="fas fa-ruler-vertical" style="min-width: 16px"></i></span> </div>
+                                    <input type="number" class="form-control" id="person.height" value="" min="0">
+                                    <div class="input-group-append">
+                                        <select id="person.heightUnitsCode" name="person.heightUnitsCode" style="border: 1px solid #ced4da; border-radius: .25rem;">
+                                            <option value="" selected disabled>--- Select ---</option>
+                                            <option value="1">Inches</option><option value="2">Centimeters</option>
+                                        </select>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-3 col-sm-6 col-form-label text-md-right" for="person.weight">Weight</label>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend"> <span class="input-group-text"><i class="fas fa-dumbbell"></i></span> </div>
+                                    <input type="number" class="form-control" id="person.weight" value="" min="0">
+                                    <div class="input-group-append">
+                                            <select id="person.weightUnitsCode" name="person.weightUnitsCode" style="border: 1px solid #ced4da; border-radius: .25rem;">
+                                                <option value="" selected disabled>--- Select ---</option>
+                                                <option value="1">Pounds</option><option value="2">Kilograms</option>
+                                            </select>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-3 col-sm-6 col-form-label text-md-right" for="person.nationality">Country</label>
+                            <div class="col-lg-4 col-sm-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-flag"></i></span></div>
+                                    <select id="person.nationality" name="person.nationality" class="form-control">
+                                        <option value="" selected disabled>--- Select ---</option>
+                                        <option value="178">United States</option><option value="2">Afghanistan</option><option value="5">Albania</option><option value="3">Algeria</option><option value="7">Andorra</option><option value="8">Angola</option><option value="1">Antigua and Barbuda</option><option value="9">Argentina</option><option value="6">Armenia</option><option value="10">Australia</option><option value="11">Austria</option><option value="4">Azerbaijan</option><option value="16">Bahamas, The</option><option value="12">Bahrain</option><option value="17">Bangladesh</option><option value="13">Barbados</option><option value="23">Belarus</option><option value="15">Belgium</option><option value="18">Belize</option><option value="22">Benin</option><option value="26">Bhutan</option><option value="20">Bolivia</option><option value="19">Bosnia and Herzegovina</option><option value="14">Botswana</option><option value="25">Brazil</option><option value="28">Brunei</option><option value="27">Bulgaria</option><option value="179">Burkina Faso</option><option value="21">Burma</option><option value="29">Burundi</option><option value="31">Cambodia</option><option value="38">Cameroon</option><option value="30">Canada</option><option value="44">Cape Verde</option><option value="42">Central African Republic</option><option value="32">Chad</option><option value="37">Chile</option><option value="36">China</option><option value="40">Colombia</option><option value="39">Comoros</option><option value="34">Congo (Brazzaville)</option><option value="35">Congo (Kinshasa)</option><option value="41">Costa Rica</option><option value="75">Croatia</option><option value="43">Cuba</option><option value="45">Cyprus</option><option value="58">Czech Republic</option><option value="83">C“te d'Ivoire</option><option value="46">Denmark</option><option value="47">Djibouti</option><option value="48">Dominica</option><option value="49">Dominican Republic</option><option value="50">Ecuador</option><option value="51">Egypt</option><option value="56">El Salvador</option><option value="53">Equatorial Guinea</option><option value="55">Eritrea</option><option value="54">Estonia</option><option value="57">Ethiopia</option><option value="60">Fiji</option><option value="59">Finland</option><option value="62">France</option><option value="64">Gabon</option><option value="63">Gambia, The</option><option value="65">Georgia</option><option value="68">Germany</option><option value="66">Ghana</option><option value="69">Greece</option><option value="67">Grenada</option><option value="70">Guatemala</option><option value="71">Guinea</option><option value="139">Guinea-Bissau</option><option value="72">Guyana</option><option value="73">Haiti</option><option value="185">Holy See</option><option value="74">Honduras</option><option value="76">Hungary</option><option value="77">Iceland</option><option value="79">India</option><option value="78">Indonesia</option><option value="80">Iran</option><option value="84">Iraq</option><option value="52">Ireland</option><option value="81">Israel</option><option value="82">Italy</option><option value="86">Jamaica</option><option value="85">Japan</option><option value="87">Jordan</option><option value="94">Kazakhstan</option><option value="88">Kenya</option><option value="91">Kiribati</option><option value="90">Korea, North</option><option value="92">Korea, South</option><option value="93">Kuwait</option><option value="89">Kyrgyzstan</option><option value="95">Laos</option><option value="97">Latvia</option><option value="96">Lebanon</option><option value="102">Lesotho</option><option value="99">Liberia</option><option value="104">Libya</option><option value="101">Liechtenstein</option><option value="98">Lithuania</option><option value="103">Luxembourg</option><option value="109">Macedonia</option><option value="105">Madagascar</option><option value="108">Malawi</option><option value="119">Malaysia</option><option value="117">Maldives</option><option value="110">Mali</option><option value="115">Malta</option><option value="141">Marshall Islands</option><option value="114">Mauritania</option><option value="113">Mauritius</option><option value="118">Mexico</option><option value="61">Micronesia</option><option value="106">Moldova</option><option value="111">Monaco</option><option value="107">Mongolia</option><option value="112">Morocco</option><option value="120">Mozambique</option><option value="186">Namibia</option><option value="127">Nauru</option><option value="126">Nepal</option><option value="124">Netherlands</option><option value="130">New Zealand</option><option value="129">Nicaragua</option><option value="121">Niger</option><option value="123">Nigeria</option><option value="125">Norway</option><option value="116">Oman</option><option value="133">Pakistan</option><option value="138">Palau</option><option value="135">Panama</option><option value="137">Papua New Guinea</option><option value="131">Paraguay</option><option value="132">Peru</option><option value="143">Philippines</option><option value="134">Poland</option><option value="136">Portugal</option><option value="140">Qatar</option><option value="142">Romania</option><option value="144">Russia</option><option value="145">Rwanda</option><option value="147">Saint Kitts and Nevis</option><option value="157">Saint Lucia</option><option value="182">Saint Vincent and the Grenadines</option><option value="187">Samoa</option><option value="153">San Marino</option><option value="168">Sao Tome and Principe</option><option value="146">Saudi Arabia</option><option value="150">Senegal</option><option value="148">Seychelles</option><option value="152">Sierra Leone</option><option value="154">Singapore</option><option value="100">Slovakia</option><option value="151">Slovenia</option><option value="24">Solomon Islands</option><option value="155">Somalia</option><option value="149">South Africa</option><option value="156">Spain</option><option value="33">Sri Lanka</option><option value="158">Sudan</option><option value="128">Suriname</option><option value="188">Swaziland</option><option value="159">Sweden</option><option value="161">Switzerland</option><option value="160">Syria</option><option value="172">Taiwan</option><option value="165">Tajikistan</option><option value="174">Tanzania</option><option value="164">Thailand</option><option value="167">Togo</option><option value="166">Tonga</option><option value="163">Trinidad and Tobago</option><option value="169">Tunisia</option><option value="170">Turkey</option><option value="173">Turkmenistan</option><option value="171">Tuvalu</option><option value="175">Uganda</option><option value="177">Ukraine</option><option value="162">United Arab Emirates</option><option value="176">United Kingdom</option><option value="180">Uruguay</option><option value="181">Uzbekistan</option><option value="122">Vanuatu</option><option value="183">Venezuela</option><option value="184">Vietnam</option><option value="190">Yemen</option><option value="189">Yugoslavia</option><option value="191">Zambia</option><option value="192">Zimbabwe</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-3 col-sm-6 col-form-label text-md-right" for="lifter.bio">Lifter Bio</label>
+                            <div class="col-lg-8 col-sm-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-atlas"></i></span></div>
+                                    <textarea id="lifter.bio" name="lifter.bio" class="form-control"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-3 col-sm-6 col-form-label text-md-right" for="bio">Picture</label>
+                            <div class="col-lg-8 col-sm-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-portrait" style="min-width:16px;"></i></span></div>
+                                    <input id="pictureExtList[0].pictureID" name="pictureExtList[0].pictureID" type="hidden" value="0">
+                                    <input id="pictureExtList[0].pictureFile" name="pictureExtList[0].pictureFile" class="form-control" type="file" value="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-md-3 col-sm-6 col-form-label text-md-right" for="videoExtList[0].videoUrl">Video Link</label>
+                            <div class="col-lg-8 col-sm-6">
+                                <div class="input-group">
+                                    <div class="input-group-prepend"><span class="input-group-text"><i class="fas fa-video"></i></span></div>
+                                    <input id="videoExtList[0].videoID" name="videoExtList[0].videoID" type="hidden" value="0">
+                                    <input id="videoExtList[0].videoUrl" name="videoExtList[0].videoUrl" class="form-control" type="text" placeholder="http://www.video.link" value="">
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <div class="form-group row">
+                                
+                            <div class="col-md-6 offset-md-3">
+                                <div class="form-row row justify-content-between mt-3">
+                                    <div class="form-check">
+                                        <input class="form-check-input" id="tosCheckbox" type="checkbox" required>
+                                        <label class="form-check-label" for="tosCheckbox">I agree to the <a href="#" data-target="#tosModal" data-toggle="modal">terms and conditions</a></label>
+                                    </div>
+                                    <div class="modal fade" id="tosModal" role="dialog" tabindex="-1">
+                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                            <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Terms of Service</h5>
+                                                <button class="close" type="button" data-dismiss="modal" aria-label="close"><span aria-hidden="true">&times;</span></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <p>I hereby grant permission to WhyILift.com to use my photographs and video links submitted for creating my profile for web, print and media publications without further consideration, and I acknowledge that WhyILift.com will treat the photographs and video links at its discretion. I also acknowledge that once my photos and links have been released to WhyILift.com or the affiliated web publications, the images can be downloaded by any computer user. I am also agreeing that I am at least 18 years of age and own all rights to the photos and videos links that I have submitted. Therefore, I agree to indemnify and hold harmless from any claims WhyILift.com</p>
+                                            </div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    <button class="btn btn-primary btn-danger mb-3" type="button" onclick="if(validate3()){submitForm();}">Submit</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+        
+        <footer class="footer bg-brand-black" style="margin-top: 10px;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-10 col-md-12">Copyright © WhyILift.com 2019
+                        All Rights Reserved. All content and information is proprietary.</div>
+                    <div class="col-lg-2 col-md-12">
+                        <i class="fa fa-envelope"></i>&nbsp;<a href="mailto:support@whyilift.com"><span class="text-muted">Contact
+                                Us</span></a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        
+    </body>
+</html>

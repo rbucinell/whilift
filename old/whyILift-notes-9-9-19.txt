@@ -1,0 +1,15 @@
+-Remove down chevron on landing page
+-mission in black
+-logo on showProfiles
+	logo is 180x80
+	mine is 100x 45
+
+- top menus look like one string
+font-variant: {
+	font-variant: petite-caps;
+}
+
+.active > .nav-link {
+	color: crimson;
+}
+

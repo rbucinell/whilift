@@ -1,0 +1,189 @@
+extends partials/layout.pug
+
+mixin recordsRow( array )
+    tr
+        each val in array
+            td= val
+
+block head-content
+    title WhyILift - Kathi Croston Sottosanti
+    style(type='text/css').
+        body{
+            background: #DAE3E7;
+        }
+        .row{
+            margin-top: 40px;
+        }
+        html,body,h1,h2,h3,h4,h5,h6 {
+            font-family: "Roboto", sans-serif
+        }
+        div.card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 3px 10px 0 rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            padding: 10px 0;
+            border-top: 3px solid var(--brand-gray);
+        }
+        .find-more{
+            text-align: right;
+        }
+        .label-theme{
+            background: #3AAA64;
+            font-size: 14px;    
+            padding: .3em .7em .3em;
+            color: #fff;
+            border-radius: .25em;
+        }
+        .label a{
+            color: inherit;
+        }
+
+        table, thead, tr, tbody, th, td {
+            text-align: center;
+        }
+        .table td {
+            text-align: center;
+        }
+block page-content
+    header.header.bg-brand-red
+      .container
+        .teacher-name(style='padding-top:20px;')
+          .row(style='margin-top:0px;')
+            .col-md-9
+              h2.text-light(style='font-size:38px')
+                strong Kathi Croston Sottosanti
+            .col-md-3
+              .button(style='float:right;')
+                a.btn.btn-outline-light.btn-sm(href='#') Edit Profile
+        .row(style='margin-top:0px;')
+          .col-md-4.col-sm-6: a(href='#'): img.rounded-circle(src='http://172.100.199.196/atlas/resources/images/profiles/1000636/thumb/profilepic_4129.jpg', alt='Kamal', style='width:200px;height:200px')
+          .col-md-8.col-sm-6
+            h5.text-light
+                | Age:
+                strong 55 yrs
+            h5.text-light
+                | Height:
+                strong  67 Inches
+            h5.text-light
+                | Location:
+                strong New Jersey, 07609, United States
+            .row
+                // Phone & Social
+                //-.col-md-4.span.number(style='font-size:18px')
+                //-    | Phone:
+                //-    strong +8801732226402
+                .col-md-4.button(style='padding-top:18px')
+                    a.btn.btn-outline-light.btn-block(href='mailto:kathi@myironbeauty.com') Send Email
+                .col-md-8.social-icons(style='padding-top:18px')
+                    a(href='#')
+                        span.fa-stack.fa-lg.text-dark
+                            i.fa.fa-circle.fa-stack-2x
+                            i.fab.fa-linkedin.fa-stack-1x.fa-inverse
+                    a(href='#')
+                        span.fa-stack.fa-lg.text-dark
+                            i.fa.fa-circle.fa-stack-2x
+                            i.fab.fa-twitter.fa-stack-1x.fa-inverse
+                    a(href='#')
+                        span.fa-stack.fa-lg.text-dark
+                            i.fa.fa-circle.fa-stack-2x
+                            i.fab.fa-facebook.fa-stack-1x.fa-inverse
+                    a(href='http://172.100.199.196/atlas/profile/viewProfile?whyiliftId=1000636&')
+                        span.fa-stack.fa-lg.text-dark
+                            i.fa.fa-circle.fa-stack-2x
+                            i.fas.fa-dumbbell.fa-stack-1x.fa-inverse.fa-rotate-90
+    // End of Header
+    // Main container
+    .container
+        // Section:Biography
+        section.row
+            .col-md-12
+                .card.card-block.text-xs-left(style="background-color: var(--brand-gray);")
+                    .card-body
+                        h3.card-title
+                            i.fa.fa-user.fa-fw.fa-sm
+                            | Biography
+                        div(style='height: 15px')
+                        p.card-text
+                            | In her first powerlifting meet in the Master s 50-54 148 weight class Kathi Sottosanti set the New jersey State  and National records in the squat, bench press, deadlift and total. Kathi also set  state record for novice deadlift in the Master s 50-54 148 weight class.
+        
+        //Section: Slideshow
+        section.row
+            .col-sm-12
+                #carouselExampleControls.carousel.slide(data-ride='carousel')
+                    .carousel-inner
+                        .carousel-item.active
+                            img.d-block.w-100(src='http://172.100.199.196/atlas/resources/images/profiles/1000636/profilepic_4126.jpg', alt='First slide')
+                        .carousel-item
+                            img.d-block.w-100(src='http://172.100.199.196/atlas/resources/images/profiles/1000636/profilepic_4127.jpg', alt='First slide')
+                        .carousel-item
+                            img.d-block.w-100(src='http://172.100.199.196/atlas/resources/images/profiles/1000636/profilepic_4128.jpg', alt='First slide')
+                    a.carousel-control-prev(href='#carouselExampleControls', role='button', data-slide='prev')
+                        span.carousel-control-prev-icon(aria-hidden='true')
+                        span.sr-only Previous
+                    a.carousel-control-next(href='#carouselExampleControls', role='button', data-slide='next')
+                        span.carousel-control-next-icon(aria-hidden='true')
+                        span.sr-only Next
+
+        //Section:Records
+        section.row
+            .col-md-12
+                .card.card-block.text-xs-left(style="background-color: var(--brand-gray);")
+                    .card-body
+                        h3.card-title
+                            i.fas.fa-dumbbell
+                            | Records
+                        div(style='height: 15px')
+                        table.table.table-responsive.table-striped.table-hover.table-sm
+                            thead.thead-dark
+                                tr
+                                    th(scope='col') Federation
+                                    th(scope='col') Division
+                                    th(scope='col') Equip
+                                    th(scope='col') Level
+                                    th(scope='col') Country
+                                    th(scope='col') State
+                                    th(scope='col') Event
+                                    th(scope='col') Wt Cls
+                                    th(scope='col') Lift Type
+                                    th(scope='col') Total (lbs)/Reps
+                                    th(scope='col') Date
+                                    th(scope='col') Details
+                            tbody
+                                tr.bg-danger: td(colspan="12") Current Records
+                                +recordsRow( ['WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII'] )
+                                +recordsRow( ['WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII'] )
+                                +recordsRow( ['WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII'] )
+                                tr.bg-danger: td(colspan="12") Personal Best
+                                +recordsRow( ['WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII'] )
+                                +recordsRow( ['WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII'] )
+                                +recordsRow( ['WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII'] )
+                                +recordsRow( ['WNPF', 'Masters 50-54', 'Raw', 'National', 'United States', '-', 'Powerliftting', '148', 'Squat', '200', '06/05/2016', 'WNPF Battle of the BordersII'] )
+
+        // Section:Awards
+        section.row
+            .col-md-12
+                .card.card-block.text-xs-left(style="background-color: var(--brand-gray);")
+                    .card-body
+                        h3.card-title
+                            i.fas.fa-calendar
+                            | Meets
+                        div(style='height: 15px')
+                        table.table.table-responsive.table-striped.table-hover
+                            thead.thead-dark
+                                tr
+                                    th(scope='col') Event
+                                    th(scope='col') Date
+                                    th(scope='col') Wt Cls
+                                    th(scope='col') Division
+                                    th(scope='col') Equip
+                                    th(scope='col') Squat
+                                    th(scope='col') Bench Press
+                                    th(scope='col') Dead Lift
+                                    th(scope='col') Total
+                                    th(scope='col') PowerCurl
+                                    th(scope='col') Reps
+                                    th(scope='col') Win Place
+                            tbody
+                                tr.bg-danger: td(colspan="12") Meet Event Results
+                                +recordsRow( ['WNPF National', '06/06/2016', '148 lbs', 'Novice', 'Raw', '200', '105', '305', '620', ' ', ' ', '1st' ])
+                                +recordsRow( ['WNPF National', '06/06/2016', '148 lbs', 'Novice', 'Raw', '200', '105', '305', '620', ' ', ' ', '1st' ])
