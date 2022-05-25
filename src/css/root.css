@@ -1,0 +1,23 @@
+:root {
+    --bs-font-sans-serif: "Gudea", Georgia, serif;
+    --brand-red: #B5362A;
+    --brand-red-dark: #AC3226;
+    --brand-gray: #919191;
+    --brand-black: #161616;
+}
+
+.text-brand-red {
+    color: var(--brand-red);
+}
+
+.text-brand-red-dark {
+    color: var(--brand-red-dark);
+}
+
+.text-brand-gray {
+    color: var(--brand-gray);
+}
+
+.text-brand-black {
+    color: var(--brand-black);
+}
