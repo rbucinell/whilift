@@ -21,3 +21,9 @@
 .text-brand-black {
     color: var(--brand-black);
 }
+
+.btn-brand-red {
+    color: #fff;
+    background-color: var(--brand-red);
+    border-color: var(--brand-red);
+}
