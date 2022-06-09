@@ -1,0 +1,138 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="keywords" content="htmlcss bootstrap menu, navbar, offcanvas, sidebar nav menu CSS examples" />
+  <meta name="description" content="Bootstrap 5 navbar make offcanvas on responsive mobile" />
+
+  <title>Our History</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon.svg">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
+
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/nav.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!-- ============= NAV START ============== -->
+  <span class="screen-darken"></span>
+  <div class="container-fluid px-0">
+    <!--Staic Nav (Displayed when main nav isn't visible)-->
+    <nav class="navbar navbar-dark bg-black d-block d-lg-none">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="/home"><img src="img/favicon.svg" width="30" height="24" />Strength and Power Hall Of Fame</a>
+        <button data-trigger="navbar_main" class="navbar-toggler d-lg-none btn btn-warning" type="button">
+          <span class="navbar-toggler-icon" data-trigger="navbar_main"></span>
+        </button>
+      </div>
+    </nav>
+
+    <!--Main Nav with toggle behavior-->
+    <nav id="navbar_main" class="mobile-offcanvas navbar navbar-expand-lg navbar-dark bg-black">
+      <div class="container">
+        <div class="offcanvas-header"><button class="btn-close float-end"></button></div>
+        <a class="navbar-brand" href="/home"><img src="img/favicon.svg" width="30" height="24" />Strength and Power Hall Of Fame</a>
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item active"> <a class="nav-link" href="#">Home</a> </li>
+          <li class="nav-item"><a class="nav-link" href="/site-directory">Site Directory</a></li>
+          <li class="nav-item"><a class="nav-link" href="/hof-inductees">HOF Inductees</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-display="static" data-bs-toggle="dropdown">MORE</a>
+            <ul class="dropdown-menu">
+              <li><a class="nav-item dropdown-item" href="/state-hof-requirements-1">State of HOF Requirements</a></li>
+              <li><a class="nav-item dropdown-item" href="/hof-picture-gallery">Nomination Form Comp</a></li>
+              <li><a class="nav-item dropdown-item" href="/shop">Nomination Form Contributor</a></li>
+              <li><a class="nav-item dropdown-item" href="/hof-picture-gallery">HOF Picture Gallery</a></li>
+              <li><a class="nav-item dropdown-item" href="/shop">Shop</a></li>
+              <li><a class="nav-item dropdown-item" href="/mission-statement">Mission Statement</a></li>
+              <li><a class="nav-item dropdown-item" href="/the-anderson-award">The Anderson Award</a></li>
+              <li><a class="nav-item dropdown-item" href="/our-history">Our History</a></li>
+              <li><a class="nav-item dropdown-item" href="/sponsors">Sponsors</a></li>
+              <li><a class="nav-item dropdown-item" href="/administration">Administration</a></li>
+              <li><a class="nav-item dropdown-item" href="/bio-form">Bio Form</a></li>
+              <li><a class="nav-item dropdown-item" href="/upload-photos">Upload Photos</a></li>
+              <li><a class="nav-item dropdown-item" href="/hof-ring-order-form">HOF Ring Order Form</a></li>
+              <li><a class="nav-item dropdown-item" href="/m/account">Sign In</a></li>
+              <li><a class="nav-item dropdown-item" href="/m/account">My Account</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- ============= NAV END ============== -->
+
+    <!-- ============= CONTENT START ============== -->
+    <div class="container">
+      <div class="row mt-5">
+        <div class="col">
+          <h1 class="fs-1 text-center text-brand-red fst-italic">Our History</h1>
+        </div>
+      </div>
+      <div class="fs-4">
+
+        <!--Mission Statement-->
+        <div class="row mt-5">
+          <div class="col-12 text-center">
+            <img class="img-fluid" src="img/sandphof_logo.webp">
+          </div>
+          <div class="col-12 text-brand-gray">
+            <div class="m-4 p-3">
+                <p>The Strength and Power Hall of Fame began in 2014 when a split occurred over whether or not to include athletes with a current history of banned drug use. The Strength and Power Hall of Fame does not condone the usage or selling of such substances and therefore can not support the induction of those that do. Furthermore, the Strength and Power Hall of Fame, in addition to recognizing unique accomplishment, was also founded on the guideposts of acknowledging those of outstanding sportsmanship and contribution.  Simply stated, our goal is to not only recognize the greats in the strength world, but to also honor those who go above and beyond when giving back to the community and who promote the growth of our collective number of sports (powerlifting, weightlifting, strongman/woman, track and field, wrestling, etc)!</p>
+                <p>The Strength and Power Hall of Fame was first conceived when Bill Clark was approached by a top federation regarding the creation of a powerlifting hall of fame. Bill, being a powerlifter, but also a former Olympic weightlifter and professional strongman believed that such a hall of fame would be better by serving all in the strength world--not just powerlifters. Subsequently, Bill respectfully declined the position, but the idea of starting an all-inclusive fraternity still lingered. Upon conferring with close friends and strength legends Larry Bucchioni and Don Reinhoudt, the three decided that it was time to create a unique hall of fame that did just that---honored all strength and power athletes--in all fields and sports, from powerlifters to shot putters and discus throwers, to wrestlers, and beyond! Don Reinhoudt was elected as the first President to the Strength and Power Hall of Fame, Bill Clark was voted in as Vice President, and Larry Bucchioni served as recruitment officer and liaison. Larry quickly brought in trusted professionals and lifters like Eric LeBlanc and Rick Bucinell. With their incredible help, the Strength and Power Hall of Fame was up and running. What started as a state level honor has now graduated to the national level and plans are underway for world expansion! At present, every state is open for nominations. Our fraternity has grown to well over 100 with many more on the way!</p>
+            </div>
+          </div>
+        </div>
+        <!-- ============= CONTENT END ============== -->
+      </div>
+
+
+      <!-- ============= COOKIE POLICY ============== -->
+      <div class="card cookie-policy">
+        <div class="card-body">
+          <h5 class="card-title fs-3">Cookie Policy</h5>
+          <p class="card-text lead">This website uses cookies. By continuing to use this site, you accept our use of cookies.</p>
+        </div>
+        <div class="p-2">
+          <a href="#" class="btn text-uppercase text-center w-100 fw-bold">Accept & Close</a>
+        </div>
+      </div>
+      <!-- ========================================== -->
+
+
+    </div>
+
+    <!-- ================= FOOTER ================== -->
+    <footer class="footer mt-5 bg-brand-red text-center">
+      <div class="container p-5">
+        <div class="d-flex flex-horizontal justify-content-between flex-wrap">
+          <a href="#" style="text-decoration: none;" class="text-white bg-brand-red border-0 fs-5 fw-bold m-1">Site
+            Directory</a>
+          <a href="#" style="text-decoration: none;" class="text-white bg-brand-red border-0 fs-5 fw-bold m-1">State HoF
+            Requirements</a>
+          <a href="#" style="text-decoration: none;"
+            class="text-white bg-brand-red border-0 fs-5 fw-bold m-1">Nomination Form Comp</a>
+          <a href="#" style="text-decoration: none;"
+            class="text-white bg-brand-red border-0 fs-5 fw-bold m-1">Sponsors</a>
+          <a href="#" style="text-decoration: none;" class="text-white bg-brand-red border-0 fs-5 fw-bold m-1">Bio
+            Form</a>
+          <a href="#" style="text-decoration: none;" class="text-white bg-brand-red border-0 fs-5 fw-bold m-1">Upload
+            Photos</a>
+        </div>
+        <h4 class="fw-bold mt-5">Strength and Power Hall Of Fame</h4>
+        <p>Copyright © 2020 Strength and Power Hall Of Fame - All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <script type="text/javascript" src="js/nav.js"></script>
+    <script type="text/javascript" src="js/cookies.js"></script>
+</body>
+
+</html>
