@@ -22,6 +22,13 @@
     color: var(--brand-black);
 }
 
+.brand-button {
+    border-radius: 48px;
+    min-height: 56px;
+    padding: 15px 40px 0 40px;
+    text-transform: uppercase;
+}
+
 .btn-brand-red {
     color: #fff;
     background-color: var(--brand-red);
@@ -30,4 +37,8 @@
 
 .bg-brand-red {
     background-color: var(--brand-red);
+}
+
+.bg-black {
+    background-color: black;
 }
