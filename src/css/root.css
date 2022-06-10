@@ -4,6 +4,7 @@
     --brand-red-dark: #AC3226;
     --brand-gray: #919191;
     --brand-black: #161616;
+    --brand-pink: #efbdb8;
 }
 
 .text-brand-red {
@@ -35,8 +36,23 @@
     border-color: var(--brand-red);
 }
 
+.btn-brand-red-dark {
+    color: #fff;
+    background-color: var(--brand-red-dark);
+    border-color: var(--brand-red);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.55)
+}
+
+.bg-brand-pink {
+    background-color: var(--brand-pink);
+}
+
 .bg-brand-red {
     background-color: var(--brand-red);
+}
+
+.bg-brand-red-dark {
+    background-color: var(--brand-red-dark);
 }
 
 .bg-black {
