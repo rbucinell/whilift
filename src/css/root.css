@@ -1,10 +1,11 @@
 :root {
     --bs-font-sans-serif: "Gudea", Georgia, serif;
-    --brand-red: #B5362A;
     --brand-red-dark: #AC3226;
-    --brand-gray: #919191;
-    --brand-black: #161616;
     --brand-pink: #efbdb8;
+    --brand-black: #0d0d0d;
+    --brand-red: #d53b37; 
+    --brand-white: #fff;
+    --brand-gray: #dfdfdf;
 }
 
 .text-brand-red {
