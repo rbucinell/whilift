@@ -44,6 +44,16 @@
     box-shadow: 0 .5rem 1rem rgba(0,0,0,.55)
 }
 
+.btn-outline-brand-red {
+    font-family: 'AvenirNext';
+    color: var(--brand-red);
+    border-color: var(--brand-red);
+}
+.btn-outline-brand-red:hover {    
+    color: var(--brand-white);
+    background-color: var(--brand-red-dark);
+}
+
 .bg-brand-pink {
     background-color: var(--brand-pink);
 }
