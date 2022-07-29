@@ -12,3 +12,5 @@
 | 2022-06-30 | 1.5   | Navigation Bar requirements changes         | 20220727-01  |
 | 2022-07-07 | 0.5   | image icon changes                          | 20220727-01  |
 | 2022-07-26 | 0.5   | state-hof-requirements-1                    | 20220727-01  |
+|            |       |                                             |              |
+| 2022-07-29 | 0.25  | state-hof-requirements-1 formatting changes |              |
