@@ -1,41 +1,31 @@
 @import "root.css";
 
-@font-face {
-    font-family: 'AvenirNext';
-    src: url('../fonts/AvenirNextLTPro-Regular.eot');
-    src: url('../fonts/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/AvenirNextLTPro-Regular.woff2') format('woff2'),
-    url('../fonts/AvenirNextLTPro-Regular.woff') format('woff'),
-    url('../fonts/AvenirNextLTPro-Regular.ttf') format('truetype'),
-    url('../fonts/AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular') format('svg');
-    font-weight: 500;
-    font-style: normal;
-}
+body {
+    color: var(--bs-white);
+  }
+  
+  h1 {
+    font-family: "Old Standard TT", serif;
+  }
+  
+  .cookie-policy {
+    background-color: var(--brand-red-dark);
+    color: var(--bs-white);
+    width: 400px;
+    height: 250px;
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    margin: 10px;
+  }
+  
+  .cookie-policy .btn {
+    background-color: var(--bs-white);
+    color: black;
+    border-radius: 7px;
+  }
 
-@font-face {
-    font-family: 'AvenirNext';
-    src: url('../fonts/AvenirNextLTPro-Bold.eot');
-    src: url('../fonts/AvenirNextLTPro-Bold.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/AvenirNextLTPro-Bold.woff2') format('woff2'),
-    url('../fonts/AvenirNextLTPro-Bold.woff') format('woff'),
-    url('../fonts/AvenirNextLTPro-Bold.ttf') format('truetype'),
-    url('../fonts/AvenirNextLTPro-Bold.svg#AvenirNextLTPro-Bold') format('svg');
-    font-weight: 700;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'AvenirNext';
-    src: url('../fonts/AvenirNextLTPro-It.eot');
-    src: url('../fonts/AvenirNextLTPro-It.eot?#iefix') format('embedded-opentype'),
-    url('../fonts/AvenirNextLTPro-It.woff2') format('woff2'),
-    url('../fonts/AvenirNextLTPro-It.woff') format('woff'),
-    url('../fonts/AvenirNextLTPro-It.ttf') format('truetype'),
-    url('../fonts/AvenirNextLTPro-It.svg#AvenirNextLTPro-It') format('svg');
-    font-weight: 400;
-    font-style: italic;
-}
-
+  
 /* Base CSS */
 .alignleft {
     float: left;

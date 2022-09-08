@@ -8,6 +8,42 @@
     --brand-gray: #dfdfdf;
 }
 
+@font-face {
+    font-family: 'AvenirNext';
+    src: url('../fonts/AvenirNextLTPro-Regular.eot');
+    src: url('../fonts/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AvenirNextLTPro-Regular.woff2') format('woff2'),
+    url('../fonts/AvenirNextLTPro-Regular.woff') format('woff'),
+    url('../fonts/AvenirNextLTPro-Regular.ttf') format('truetype'),
+    url('../fonts/AvenirNextLTPro-Regular.svg#AvenirNextLTPro-Regular') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirNext';
+    src: url('../fonts/AvenirNextLTPro-Bold.eot');
+    src: url('../fonts/AvenirNextLTPro-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AvenirNextLTPro-Bold.woff2') format('woff2'),
+    url('../fonts/AvenirNextLTPro-Bold.woff') format('woff'),
+    url('../fonts/AvenirNextLTPro-Bold.ttf') format('truetype'),
+    url('../fonts/AvenirNextLTPro-Bold.svg#AvenirNextLTPro-Bold') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'AvenirNext';
+    src: url('../fonts/AvenirNextLTPro-It.eot');
+    src: url('../fonts/AvenirNextLTPro-It.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AvenirNextLTPro-It.woff2') format('woff2'),
+    url('../fonts/AvenirNextLTPro-It.woff') format('woff'),
+    url('../fonts/AvenirNextLTPro-It.ttf') format('truetype'),
+    url('../fonts/AvenirNextLTPro-It.svg#AvenirNextLTPro-It') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+
 .text-brand-red {
     color: var(--brand-red);
 }
