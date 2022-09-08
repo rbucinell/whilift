@@ -14,3 +14,7 @@ https://strengthandpowerhalloffamestore.com/site-directory
 
 **Paul Anderson Award**
 https://strengthandpowerhalloffamestore.com/the-anderson-award
+
+
+# Compile
+`pug src/layouts -P -w -o 'src/'`

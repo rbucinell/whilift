@@ -1,274 +1,210 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="keywords" content="htmlcss bootstrap menu, navbar, offcanvas, sidebar nav menu CSS examples" />
-    <meta name="description" content="Bootstrap 5 navbar make offcanvas on responsive mobile" />
-
-    <title>Bio Form</title>
+    <meta name="keywords" content="htmlcss bootstrap menu, navbar, offcanvas, sidebar nav menu CSS examples">
+    <meta name="description" content="Bootstrap 5 navbar make offcanvas on responsive mobile">
     <link rel="icon" type="image/x-icon" href="img/favicon.webp">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-        crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
     <link href="css/whyilift.css" rel="stylesheet">
     <link href="css/nav.css" rel="stylesheet">
     <link href="css/main.css" rel="stylesheet">
     <link href="css/chat.css" rel="stylesheet">
-</head>
-
-<body>
+    <title>Bio Form</title>
+  </head>
+  <body>
     <div class="container">
-        <!-- ============= NAV START ============== -->
-        <nav class="navbar navbar-expand-lg navbar-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="/"><img src="img/favicon.ico"></a>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item"><a class="nav-link" href="/atlas/home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/atlas/our-history">History</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/atlas/missionstatement">Mission</a></li>
-                        <li class="nav-item"><a class="nav-link"
-                                href="https://strengthandpowerhalloffame.org/state-hof-requirements-1">Requirements</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="/atlas/hof/showForms">Forms</a></li>
-                        <li class="nav-item"><a class="nav-link"
-                                href="https://strengthand-power-hall-of-fame.myshopify.com/">Store</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/atlas/site-directory">Site&nbsp;Directory</a>
-                        </li>
-                        <li class="nav-item"><a class="nav-link" href="/atlas/hof/hofSearchForm">Search</a></li>
-                        <li class="nav-item"><a class="nav-link"
-                                href="https://strengthandpowerhalloffame.org/hof-picture-gallery">HOF&nbsp;Gallery</a>
-                        </li>
-                    </ul>
-                    <button class="btn btn-outline-light" type="button">Admin Login</button>
-                </div>
-                <span class="ms-4 pull-right" style="min-width: 120px;">
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <a href="#" class="navbar-brand mx-1"><img src="img/social/facebook.svg"></a>
-                    <a href="#" class="navbar-brand mx-1"><img src="img/social/instagram.svg"></a>
-                </span>
-            </div>
-        </nav>
-        <!-- ============= NAV END ============== -->
-
-        <!-- ============= CONTENT START ============== -->
-        <div class="container">
-            <div class="row mt-5">
-                <div class="col">
-                    <h1 class="fs-1 text-center text-brand-red fst-italic">Bio Form</h1>
-                </div>
-            </div>
-
-            <!--Please Complete-->
-            <div class="row mt-2">
-                <div class="row justify-content-md-center mb-4">
-                    <div class="col text-center">
-                        <h1 class="fs-3 text-brand-white fst-italic mb-4">Please Complete</h1>
-                    </div>
-                </div>
-
-                <div class="row justify-content-md-center">
-                    <div class="col text-brand-red">
-                        <form action="submit needs-validation" novalidate>
-
-                            <div class="form-floating mb-3">
-                                <input id="form_bio_name"  class="form-control text-light bg-dark border-0 border-white border-bottom" type="text" placeholder="Name for Bio*">
-                                <label for="form_bio_name" class="form-control-sm">Name for Bio*</label>
-                            </div>
-
-                            <div class="form-floating mb-3">
-                                <input id="form_email"    class="form-control text-light bg-dark border-0 border-white border-bottom" type="text" placeholder="youremail@domain.com">
-                                <label for="form_email" class="form-control-sm">Email*</label>
-                                <div class="invalid-feedback">Please enter a valid email address.</div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="form_history">A brief personal history?<span class="fst-italic"> Please DO NOT type in ALL CAPS!</span>*</label>
-                                <textarea id="form_history" class="form-control-textarea" required></textarea>
-                                <div class="invalid-feedback">Please include a brief personal history.</div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="form_sport">What led you to your sport?*</label>
-                                <textarea id="form_sport" class="form-control-textarea" required></textarea>
-                                <div class="invalid-feedback">Please include an introduction to your sport.</div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="form_achievements">Tell us about your achievements in your sport (Using bullet form).*</label>
-                                <textarea id="form_achievements" class="form-control-textarea" required></textarea>
-                                <div class="invalid-feedback">Please tell us about your achievements.</div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="form_records">Tell us about your State, National and World records (Using bullet form).*</label>
-                                <textarea id="form_records" class="form-control-textarea" required></textarea>
-                                <div class="invalid-feedback">Please tell us about your records.</div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="form_accomplishments">Tells us about any other accomplishments.*</label>
-                                <textarea id="form_accomplishments" class="form-control-textarea" required></textarea>
-                                <div class="invalid-feedback">Please tell us about your accomplishments.</div>
-                            </div>
-                            
-                            <div class="mb-3">
-                                <label for="form_activities">Tells us about other activities within the sport i.e. Judge, meet director,  trainer, demonstrations, community actvities etc.*</label>
-                                <textarea id="form_activities" class="form-control-textarea" required></textarea>
-                                <div class="invalid-feedback">Please tell us about your other activities.</div>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="form_links">Please provide any YouTube video links for your bio.</label>
-                                <textarea id="form_links" class="form-control-textarea"></textarea>
-                            </div>
-
-                            <div class="input-group mb-3">
-                                <label for="form_attachments" class="fs-4 form-control text-brand-red bg-dark border-0 border-white border-bottom" role="button">📎 Please select any photos to wish upload.</label>
-                                <input id="form_attachments" class="d-none" multiple="true" type="file" accept=".jpg,.jpeg,.png">
-                                <span id="file_count" class="d-none input-group-text bg-dark text-light border-0">0 files selected</span>
-                                <script>
-                                    document.querySelector('#form_attachments').addEventListener('change', (event)=> {
-                                        let fcspan = document.querySelector('#file_count');
-                                        let filecount = event.target.files.length;
-                                        fcspan.innerHTML = `${event.target.files.length} file${filecount>1?'s':''} selected`;
-                                        if( filecount === 0) 
-                                            fcspan.classList.add('d-none');
-                                        else
-                                            fcspan.classList.remove('d-none');
-                                    });
-                                </script>
-                                <p class="mt-2 text-secondary">By uploading photos I hereby grant permission to Strengthandpowerhalloffame.com to use my photographs and video links submitted for creating my bio for web, print and media publications without further consideration, and I acknowledge that  Strengthandpowerhalloffame.com will treat the photographs and video links at its discretion. I also acknowledge that once my photos and links have been released to Strengthandpowerhalloffame.com, the images can be downloaded by any computer user. </p>
-                            </div>
-                            
-                            <div class="d-flex justify-content-center mt-3">
-                                <button class="btn btn-lg brand-button btn-brand-red rounded-3 p-3 px-5" type="submit">SEND</button>
-                            </div>
-
-                        </form>
-                    </div>
-                </div>
-                <!-- ============= CONTENT END ============== -->
-            </div>
+      <!-- ============= NAV START ==============-->
+      <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid"><a class="navbar-brand" href="/"><img src="img/favicon.ico"></a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item"><a class="nav-link" href="/atlas/home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="/atlas/our-history">History</a></li>
+              <li class="nav-item"><a class="nav-link" href="/atlas/missionstatement">Mission</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://strengthandpowerhalloffame.org/state-hof-requirements-1">Requirements</a></li>
+              <li class="nav-item"><a class="nav-link" href="/atlas/hof/showForms">Forms</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://strengthand-power-hall-of-fame.myshopify.com/">Store</a></li>
+              <li class="nav-item"><a class="nav-link" href="/atlas/site-directory">Site Directory</a></li>
+              <li class="nav-item"><a class="nav-link" href="/atlas/hof/hofSearchForm">Search</a></li>
+              <li class="nav-item"><a class="nav-link" href="https://strengthandpowerhalloffame.org/hof-picture-gallery">HOF Gallery</a></li>
+            </ul>
+            <button class="btn btn-outline-light" type="button">Admin Login</button>
+          </div><span class="ms-4 pull-right" style="min-width: 120px;">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><a class="navbar-brand mx-1" href="#"><img src="img/social/facebook.svg"></a><a class="navbar-brand mx-1" href="#"><img src="img/social/instagram.svg"></a></span>
         </div>
+      </nav>
+      <!-- ============= NAV END ================-->
+      <!-- ============= CONTENT START ============--><div class="row mt-5">
+    <div class="col">
+        <h1 class="fs-1 text-center text-brand-red fst-italic">Bio Form</h1>
+    </div>
+</div>
 
-        <!-- ============= CONTENT END ============== -->
-        <div id="chat-container">
-            <div id="chat-btn-open" class="btn btn-brand-red-dark rounded-circle" data-bs-target="#messageModal"
-                data-bs-toggle="modal">
-                <svg viewBox="0 0 24 24" fill="white" width="34" height="34">
-                    <g fill="white">
-                        <rect x="4" y="6" width="16" height="10.222" rx="1.129"></rect>
-                        <path
-                            d="M8.977 18.578l.2-2.722a.564.564 0 01.564-.523h3.61c.548 0 .774.705.327 1.024l-3.81 2.721a.564.564 0 01-.89-.5z">
-                        </path>
-                    </g>
-                </svg>
-            </div>
-            <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header bg-brand-red pb-4">
-                            <h3 class="modal-title text-white" id="messageModalLabel">Strength and Power Hall Of Fame
-                            </h3>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="speech-bubble">
-                                <div class="text-dark bg-brand-pink mx-auto w-75 px-3 py-2 hi-there rounded">
-                                    Hi! Let us know how we can help and we'll respond shortly.
-                                </div>
-                                <svg viewBox="0 0 24 24" fill="#efbdb8" width="24" height="24" data-ux="Icon"
-                                    class="speech-bubble">
-                                    <path
-                                        d="M0.342304 14.5C7.35025 6.3293 3.35025 0.829295 0 0.0.0 0.0 5.4 2.1 32.3502 0.329295C32.3503 3.8293 -3.13481 20.7261 0.342304 14.5Z">
-                                    </path>
-                                </svg>
-                            </div>
-                            <form action="submit needs-validation" novalidate>
-
-                                <div class="form-floating mb-3">
-                                    <input required id="form_name" class="form-control border-5 border-0 border-bottom"
-                                        type="text" placeholder="First Last">
-                                    <label for="form_name" class="form-control-sm text-brand-red">Name</label>
-                                    <div class="invalid-feedback">Please fill in this required field</div>
-                                </div>
-
-                                <div class="form-floating mb-3">
-                                    <input id="form_email" class="form-control border-5 border-0 border-bottom"
-                                        type="text" placeholder="youremail@domain.com">
-                                    <label for="form_email" class="form-control-sm text-brand-red">Email</label>
-                                    <div class="invalid-feedback">Please enter a valid email address.</div>
-                                </div>
-
-                                <div class="form-floating mb-3">
-                                    <textarea id="form_message" class="form-control border-5 border-0 border-bottom" placeholder="How can we help?"></textarea>
-                                    <label for="form_message" class="form-control-sm text-brand-red">How can we
-                                        help?</label>
-                                    <div class="invalid-feedback">Please fill in this required field</div>
-                                </div>
-
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="rounded-pill btn btn-secondary"
-                                data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="rounded-pill btn btn-brand-red">Send</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!--Please Complete-->
+<div class="row mt-2">
+    <div class="row justify-content-md-center mb-4">
+        <div class="col text-center">
+            <h1 class="fs-3 text-brand-white fst-italic mb-4">Please Complete</h1>
         </div>
     </div>
 
+    <div class="row justify-content-md-center">
+        <div class="col text-brand-red">
+            <form action="submit needs-validation" novalidate>
+
+                <div class="form-floating mb-3">
+                    <input id="form_bio_name"  class="form-control text-light bg-dark border-0 border-white border-bottom" type="text" placeholder="Name for Bio*">
+                    <label for="form_bio_name" class="form-control-sm">Name for Bio*</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input id="form_email"    class="form-control text-light bg-dark border-0 border-white border-bottom" type="text" placeholder="youremail@domain.com">
+                    <label for="form_email" class="form-control-sm">Email*</label>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="form_history">A brief personal history?<span class="fst-italic"> Please DO NOT type in ALL CAPS!</span>*</label>
+                    <textarea id="form_history" class="form-control-textarea" required></textarea>
+                    <div class="invalid-feedback">Please include a brief personal history.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="form_sport">What led you to your sport?*</label>
+                    <textarea id="form_sport" class="form-control-textarea" required></textarea>
+                    <div class="invalid-feedback">Please include an introduction to your sport.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="form_achievements">Tell us about your achievements in your sport (Using bullet form).*</label>
+                    <textarea id="form_achievements" class="form-control-textarea" required></textarea>
+                    <div class="invalid-feedback">Please tell us about your achievements.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="form_records">Tell us about your State, National and World records (Using bullet form).*</label>
+                    <textarea id="form_records" class="form-control-textarea" required></textarea>
+                    <div class="invalid-feedback">Please tell us about your records.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="form_accomplishments">Tells us about any other accomplishments.*</label>
+                    <textarea id="form_accomplishments" class="form-control-textarea" required></textarea>
+                    <div class="invalid-feedback">Please tell us about your accomplishments.</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="form_activities">Tells us about other activities within the sport i.e. Judge, meet director,  trainer, demonstrations, community actvities etc.*</label>
+                    <textarea id="form_activities" class="form-control-textarea" required></textarea>
+                    <div class="invalid-feedback">Please tell us about your other activities.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="form_links">Please provide any YouTube video links for your bio.</label>
+                    <textarea id="form_links" class="form-control-textarea"></textarea>
+                </div>
+
+                <div class="input-group mb-3">
+                    <label for="form_attachments" class="fs-4 form-control text-brand-red bg-dark border-0 border-white border-bottom" role="button">📎 Please select any photos to wish upload.</label>
+                    <input id="form_attachments" class="d-none" multiple="true" type="file" accept=".jpg,.jpeg,.png">
+                    <span id="file_count" class="d-none input-group-text bg-dark text-light border-0">0 files selected</span>
+                    <script>
+                        document.querySelector('#form_attachments').addEventListener('change', (event)=> {
+                            let fcspan = document.querySelector('#file_count');
+                            let filecount = event.target.files.length;
+                            fcspan.innerHTML = `${event.target.files.length} file${filecount>1?'s':''} selected`;
+                            if( filecount === 0) 
+                                fcspan.classList.add('d-none');
+                            else
+                                fcspan.classList.remove('d-none');
+                        });
+                    </script>
+                    <p class="mt-2 text-secondary">By uploading photos I hereby grant permission to Strengthandpowerhalloffame.com to use my photographs and video links submitted for creating my bio for web, print and media publications without further consideration, and I acknowledge that  Strengthandpowerhalloffame.com will treat the photographs and video links at its discretion. I also acknowledge that once my photos and links have been released to Strengthandpowerhalloffame.com, the images can be downloaded by any computer user. </p>
+                </div>
+                
+                <div class="d-flex justify-content-center mt-3">
+                    <button class="btn btn-lg brand-button btn-brand-red rounded-3 p-3 px-5" type="submit">SEND</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+      <!-- ============= CONTENT END ==============-->
+      <!-- ============= CHAT START ==============-->
+      <div id="chat-container">
+        <div class="btn btn-brand-red-dark rounded-circle" id="chat-btn-open" data-bs-target="#messageModal" data-bs-toggle="modal">
+          <svg viewBox="0 0 24 24" fill="white" width="34" height="34">
+            <g fill="white">
+              <rect x="4" y="6" width="16" height="10.222" rx="1.129"></rect>
+              <path d="M8.977 18.578l.2-2.722a.564.564 0 01.564-.523h3.61c.548 0 .774.705.327 1.024l-3.81 2.721a.564.564 0 01-.89-.5z"></path>
+            </g>
+          </svg>
+        </div>
+        <div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header bg-brand-red pb-4">
+                <h3 class="modal-title text-white" id="messageModalLabel">Strength and Power Hall Of Fame</h3>
+                <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="speech-bubble">
+                  <div class="text-dark bg-brand-pink mx-auto w-75 px-3 py-2 hi-there rounded">Hi! Let us know how we can help and we'll respond shortly.</div>
+                  <svg class="speech-bubble" viewBox="0 0 24 24" fill="#efbdb8" width="24" height="24" data-ux="Icon">
+                    <path d="M0.342304 14.5C7.35025 6.3293 3.35025 0.829295 0 0.0.0 0.0 5.4 2.1 32.3502 0.329295C32.3503 3.8293 -3.13481 20.7261 0.342304 14.5Z"></path>
+                  </svg>
+                </div>
+                <form action="submit needs-validation" novalidate="">
+                  <div class="form-floating mb-3">
+                    <input class="form-control border-5 border-0 border-bottom" id="form_name" required="" type="text" placeholder="First Last">
+                    <label class="form-control-sm text-brand-red" for="form_name">Name</label>
+                    <div class="invalid-feedback">Please fill in this required field</div>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <input class="form-control border-5 border-0 border-bottom" id="form_email" type="text" placeholder="youremail@domain.com">
+                    <label class="form-control-sm text-brand-red" for="form_email">Email</label>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                  </div>
+                  <div class="form-floating mb-3">
+                    <textarea class="form-control border-5 border-0 border-bottom" id="form_message" style="height: 200px" placeholder="How can we help?"></textarea>
+                    <label class="form-control-sm text-brand-red" for="form_message">How can we help?</label>
+                    <div class="invalid-feedback">Please fill in this required field</div>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button class="rounded-pill btn btn-secondary" type="button" data-bs-dismiss="modal">Close</button>
+                <button class="rounded-pill btn btn-brand-red" type="button">Send</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ============= CHAT END ================-->
+    </div>
+    <!-- ============= FOOTER START ==============-->
     <footer class="footer mt-5 bg-brand-red text-center">
-        <div class="container p-5">
-            <div class="d-flex flex-horizontal justify-content-between flex-wrap">
-                <a href="#" style="text-decoration: none;"
-                    class="text-white bg-brand-red border-0 fs-5 fw-bold m-1">Site
-                    Directory</a>
-                <a href="#" style="text-decoration: none;"
-                    class="text-white bg-brand-red border-0 fs-5 fw-bold m-1">State HoF
-                    Requirements</a>
-                <a href="#" style="text-decoration: none;"
-                    class="text-white bg-brand-red border-0 fs-5 fw-bold m-1">Nomination Form Comp</a>
-                <a href="#" style="text-decoration: none;"
-                    class="text-white bg-brand-red border-0 fs-5 fw-bold m-1">Sponsors</a>
-                <a href="#" style="text-decoration: none;" class="text-white bg-brand-red border-0 fs-5 fw-bold m-1">Bio
-                    Form</a>
-                <a href="#" style="text-decoration: none;"
-                    class="text-white bg-brand-red border-0 fs-5 fw-bold m-1">Upload
-                    Photos</a>
-            </div>
-            <h4 class="fw-bold mt-5">Strength and Power Hall Of Fame</h4>
-            <p>Copyright © 2020 Strength and Power Hall Of Fame - All Rights Reserved.</p>
-        </div>
+      <div class="container p-5">
+        <div class="d-flex flex-horizontal justify-content-between flex-wrap"><a class="text-white bg-brand-red border-0 fs-5 fw-bold m-1" href="#" style="text-decoration: none;">Site Directory</a><a class="text-white bg-brand-red border-0 fs-5 fw-bold m-1" href="#" style="text-decoration: none;">State HoF Requirements</a><a class="text-white bg-brand-red border-0 fs-5 fw-bold m-1" href="#" style="text-decoration: none;">Nomination Form Comp</a><a class="text-white bg-brand-red border-0 fs-5 fw-bold m-1" href="#" style="text-decoration: none;">Sponsors</a><a class="text-white bg-brand-red border-0 fs-5 fw-bold m-1" href="#" style="text-decoration: none;">Bio Form</a><a class="text-white bg-brand-red border-0 fs-5 fw-bold m-1" href="#" style="text-decoration: none;">Upload Photos</a></div>
+        <h4 class="fw-bold mt-5">Strength and Power Hall Of Fame</h4>
+        <p>Copyright © 2020 Strength and Power Hall Of Fame - All Rights Reserved.</p>
+      </div>
     </footer>
-
-    <!-- ============= COOKIE POLICY ============== -->
+    <!-- ============= FOOTER END ================-->
+    <!-- ============= COOKIE POLICY START ==============-->
     <div class="card cookie-policy">
-        <div class="card-body">
-            <h5 class="card-title fs-3">Cookie Policy</h5>
-            <p class="card-text lead">This website uses cookies. By continuing to use this site, you accept our
-                use of cookies.</p>
-        </div>
-        <div class="p-2">
-            <a href="#" class="btn text-uppercase text-center w-100 fw-bold">Accept & Close</a>
-        </div>
+      <div class="card-body">
+        <h5 class="card-title fs-3">Cookie Policy</h5>
+        <p class="card-text lead">This website uses cookies. By continuing to use this site, you accept our use of cookies.</p>
+      </div>
+      <div class="p-2"><a class="btn text-uppercase text-center w-100 fw-bold" href="#">Accept &amp; Close</a></div>
     </div>
-    <!-- ========================================== -->
+    <!-- ============= COOKIE POLICY END ================-->
     <script type="text/javascript" src="js/nav.js"></script>
     <script type="text/javascript" src="js/cookies.js"></script>
-</body>
-
+  </body>
 </html>

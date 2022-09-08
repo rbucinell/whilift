@@ -1,0 +1,96 @@
+<div class="row mt-5">
+    <div class="col">
+        <h1 class="fs-1 text-center text-brand-red fst-italic">Bio Form</h1>
+    </div>
+</div>
+
+<!--Please Complete-->
+<div class="row mt-2">
+    <div class="row justify-content-md-center mb-4">
+        <div class="col text-center">
+            <h1 class="fs-3 text-brand-white fst-italic mb-4">Please Complete</h1>
+        </div>
+    </div>
+
+    <div class="row justify-content-md-center">
+        <div class="col text-brand-red">
+            <form action="submit needs-validation" novalidate>
+
+                <div class="form-floating mb-3">
+                    <input id="form_bio_name"  class="form-control text-light bg-dark border-0 border-white border-bottom" type="text" placeholder="Name for Bio*">
+                    <label for="form_bio_name" class="form-control-sm">Name for Bio*</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input id="form_email"    class="form-control text-light bg-dark border-0 border-white border-bottom" type="text" placeholder="youremail@domain.com">
+                    <label for="form_email" class="form-control-sm">Email*</label>
+                    <div class="invalid-feedback">Please enter a valid email address.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="form_history">A brief personal history?<span class="fst-italic"> Please DO NOT type in ALL CAPS!</span>*</label>
+                    <textarea id="form_history" class="form-control-textarea" required></textarea>
+                    <div class="invalid-feedback">Please include a brief personal history.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="form_sport">What led you to your sport?*</label>
+                    <textarea id="form_sport" class="form-control-textarea" required></textarea>
+                    <div class="invalid-feedback">Please include an introduction to your sport.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="form_achievements">Tell us about your achievements in your sport (Using bullet form).*</label>
+                    <textarea id="form_achievements" class="form-control-textarea" required></textarea>
+                    <div class="invalid-feedback">Please tell us about your achievements.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="form_records">Tell us about your State, National and World records (Using bullet form).*</label>
+                    <textarea id="form_records" class="form-control-textarea" required></textarea>
+                    <div class="invalid-feedback">Please tell us about your records.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="form_accomplishments">Tells us about any other accomplishments.*</label>
+                    <textarea id="form_accomplishments" class="form-control-textarea" required></textarea>
+                    <div class="invalid-feedback">Please tell us about your accomplishments.</div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="form_activities">Tells us about other activities within the sport i.e. Judge, meet director,  trainer, demonstrations, community actvities etc.*</label>
+                    <textarea id="form_activities" class="form-control-textarea" required></textarea>
+                    <div class="invalid-feedback">Please tell us about your other activities.</div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="form_links">Please provide any YouTube video links for your bio.</label>
+                    <textarea id="form_links" class="form-control-textarea"></textarea>
+                </div>
+
+                <div class="input-group mb-3">
+                    <label for="form_attachments" class="fs-4 form-control text-brand-red bg-dark border-0 border-white border-bottom" role="button">📎 Please select any photos to wish upload.</label>
+                    <input id="form_attachments" class="d-none" multiple="true" type="file" accept=".jpg,.jpeg,.png">
+                    <span id="file_count" class="d-none input-group-text bg-dark text-light border-0">0 files selected</span>
+                    <script>
+                        document.querySelector('#form_attachments').addEventListener('change', (event)=> {
+                            let fcspan = document.querySelector('#file_count');
+                            let filecount = event.target.files.length;
+                            fcspan.innerHTML = `${event.target.files.length} file${filecount>1?'s':''} selected`;
+                            if( filecount === 0) 
+                                fcspan.classList.add('d-none');
+                            else
+                                fcspan.classList.remove('d-none');
+                        });
+                    </script>
+                    <p class="mt-2 text-secondary">By uploading photos I hereby grant permission to Strengthandpowerhalloffame.com to use my photographs and video links submitted for creating my bio for web, print and media publications without further consideration, and I acknowledge that  Strengthandpowerhalloffame.com will treat the photographs and video links at its discretion. I also acknowledge that once my photos and links have been released to Strengthandpowerhalloffame.com, the images can be downloaded by any computer user. </p>
+                </div>
+                
+                <div class="d-flex justify-content-center mt-3">
+                    <button class="btn btn-lg brand-button btn-brand-red rounded-3 p-3 px-5" type="submit">SEND</button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
