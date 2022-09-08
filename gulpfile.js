@@ -1,12 +1,12 @@
 "use strict";
 
-var gulp    = require( 'gulp' ),
-    contact = require( 'gulp-concat'),
-    watch   = require( 'gulp-watch'),
-    pug     = require('gulp-pug');
+const gulp    = require( 'gulp' );
+const contact = require( 'gulp-concat');
+const watch   = require( 'gulp-watch');
+const pug     = require( 'gulp-pug');
     
 var source = 'src/';
-var dest = 'dist/';
+var dest = 'compiled/';
 
 var paths = {
     scripts: [

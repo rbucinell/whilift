@@ -1,0 +1,35 @@
+// ============= CHAT START ==============
+#chat-container
+    #chat-btn-open.btn.btn-brand-red-dark.rounded-circle(data-bs-target='#messageModal' data-bs-toggle='modal')
+        svg(viewBox='0 0 24 24' fill='white' width='34' height='34')
+            g(fill='white')
+                rect(x='4' y='6' width='16' height='10.222' rx='1.129')
+                path(d='M8.977 18.578l.2-2.722a.564.564 0 01.564-.523h3.61c.548 0 .774.705.327 1.024l-3.81 2.721a.564.564 0 01-.89-.5z')
+    #messageModal.modal.fade(tabindex='-1' aria-labelledby='messageModalLabel' aria-hidden='true')
+        .modal-dialog
+            .modal-content
+                .modal-header.bg-brand-red.pb-4
+                    h3#messageModalLabel.modal-title.text-white Strength and Power Hall Of Fame
+                    button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                .modal-body
+                    .speech-bubble
+                        .text-dark.bg-brand-pink.mx-auto.w-75.px-3.py-2.hi-there.rounded Hi! Let us know how we can help and we'll respond shortly.
+                        svg.speech-bubble(viewBox='0 0 24 24' fill='#efbdb8' width='24' height='24' data-ux='Icon')
+                            path(d='M0.342304 14.5C7.35025 6.3293 3.35025 0.829295 0 0.0.0 0.0 5.4 2.1 32.3502 0.329295C32.3503 3.8293 -3.13481 20.7261 0.342304 14.5Z')
+                    form(action='submit needs-validation' novalidate='')
+                        .form-floating.mb-3
+                            input#form_name.form-control.border-5.border-0.border-bottom(required='' type='text' placeholder='First Last')
+                            label.form-control-sm.text-brand-red(for='form_name') Name
+                            .invalid-feedback Please fill in this required field
+                        .form-floating.mb-3
+                            input#form_email.form-control.border-5.border-0.border-bottom(type='text' placeholder='youremail@domain.com')
+                            label.form-control-sm.text-brand-red(for='form_email') Email
+                            .invalid-feedback Please enter a valid email address.
+                        .form-floating.mb-3
+                            textarea#form_message.form-control.border-5.border-0.border-bottom(style='height: 200px' placeholder='How can we help?')
+                            label.form-control-sm.text-brand-red(for='form_message') How can we help?
+                            .invalid-feedback Please fill in this required field
+                .modal-footer
+                    button.rounded-pill.btn.btn-secondary(type='button' data-bs-dismiss='modal') Close
+                    button.rounded-pill.btn.btn-brand-red(type='button') Send
+// ============= CHAT END ================

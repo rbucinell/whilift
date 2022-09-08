@@ -1,0 +1,12 @@
+doctype html
+html(lang='en')
+    include ./head.pug
+    body
+        .container
+            include ./nav.pug
+            block content
+            include ./chat.pug
+        include ./footer.pug
+        include ./cookie-policy.pug
+        include ./scripts-footer.pug
+        block scripts
