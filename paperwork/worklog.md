@@ -14,3 +14,6 @@
 | 2022-07-26 | 0.5   | state-hof-requirements-1                    | 20220727-01  |
 |            |       |                                             |              |
 | 2022-07-29 | 0.25  | state-hof-requirements-1 formatting changes |              |
+| 2022-09-06 | 1     | contact & bio-form                          |              |
+| 2022-09-07 | 2     | css updates & anderson-award-fixes          |              |
+| 2022-09-08 | 2     | bio-form &view Article                      |              |
