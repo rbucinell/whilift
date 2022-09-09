@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/rbucinell/whilift#readme",
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-pug": "^5.0.0",
     "vite": "^2.9.13"
   },
   "dependencies": {

@@ -17,3 +17,4 @@
 | 2022-09-06 | 1     | contact & bio-form                          |              |
 | 2022-09-07 | 2     | css updates & anderson-award-fixes          |              |
 | 2022-09-08 | 2     | bio-form &view Article                      |              |
+| 2022-09-08 | 1.5   | project build and css updates               |              |
