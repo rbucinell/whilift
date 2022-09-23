@@ -3,5 +3,32 @@ block head
     title Site Directory
 block content 
     // ============= CONTENT START ============
-    include content/site-directory.html
+    mixin menuitem( title, link, btnname )
+        .col
+            .card.bg-brand-black.h-100
+                h4.card-header.fs-2 #{title}
+                .card-body
+                    a.brand-button.fw-bold.btn.btn-outline-brand-red(href="#{link}") #{btnname}
+
+    .row.mt-5: .col: h1.fs-1.text-center.text-brand-red.fst-italic Site Content
+    .row.row-cols-1.row-cols-md-2.row-cols-lg-3.g-4.text-center
+        +menuitem( 'State Requirements', '/state-hof-requirements-1', 'State Requirements')
+        +menuitem( 'Inductees Photos',   '/hof-picture-gallery',      'Photo Gallery' )
+        +menuitem( 'Inductees',          '/atlas/hof/hofSearchForm',  'Search' )
+        +menuitem( 'Articles - Inductees Bios', '/atlas/article/searchArticles?articleType=2&', 'Search' )
+        +menuitem( 'Articles - Inductees Training', '/atlas/article/searchArticles?articleType=4&', 'Search' )
+        +menuitem( 'Articles - HoF News', '/atlas/article/searchArticles?articleType=3&', 'Search' )
+        +menuitem( 'Forms - Competitor',  '/nomination-form-comp', 'Nomination Form' )
+        +menuitem( 'Forms - Contributor', '/nomination-form-contribut', 'Nomination Form' )
+        +menuitem( 'Forms- Bio', '/bio-form', 'Bio Form' )
+        +menuitem( 'Our Mission', '/mission-statement', 'Mission' )
+        +menuitem( 'Our History', '/our-history', 'History' )
+        +menuitem( 'Our Store - Official Merch', 'https://strengthand-power-hall-of-fame.myshopify.com/', 'Shop Now' )
+    hr.my-1
+    .row.row-cols-1.row-cols-md-2.row-cols-lg-3.g-4.text-center
+        +menuitem( 'The Paul and Glenda Anderson Award', '/the-anderson-award', 'Paul and Glenda Anderson Award')
+        +menuitem( 'Sponsors', '/sponsors', 'Sponsors' )
+        +menuitem( 'Misc Strength Articles', '/atlas/article/searchArticles?articleType=1&',  'Articles' )
+
+    //include content/site-directory.html
     // ============= CONTENT END ==============
