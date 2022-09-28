@@ -18,3 +18,7 @@
 | 2022-09-07 | 2     | css updates & anderson-award-fixes          |              |
 | 2022-09-08 | 2     | bio-form &view Article                      |              |
 | 2022-09-08 | 1.5   | project build and css updates               |              |
+| 2022-09-11 | 1     | status meeting                              |              |
+| 2022-09-20 | 0.5   | logo design discovery                       |              |
+| 2022-09-23 | 1     | site content and meta tags                  |              |
+| 2022-09-28 | 2     | Logo, favicon, and simplified logo          |              |
