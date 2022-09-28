@@ -23,7 +23,7 @@ gulp.task('build-pug', function(){
 });
 
 gulp.task( 'watch:pug' , function(){
-	gulp.watch( source + '/layouts/*.pug', gulp.task('build-pug') );
+	gulp.watch( source + '/layouts/**/*.pug', gulp.task('build-pug') );
 });
 
 gulp.task( 'release' , gulp.parallel(['build-pug', 'copy-all' ]) );
