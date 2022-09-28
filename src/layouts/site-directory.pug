@@ -6,7 +6,7 @@ block content
     mixin menuitem( title, link, btnname )
         .col
             .card.bg-brand-black.h-100
-                h4.card-header.fs-2 #{title}
+                h4.card-header #{title}
                 .card-body
                     a.brand-button.fw-bold.btn.btn-outline-brand-red(href="#{link}") #{btnname}
 
@@ -24,9 +24,9 @@ block content
         +menuitem( 'Our Mission', '/mission-statement', 'Mission' )
         +menuitem( 'Our History', '/our-history', 'History' )
         +menuitem( 'Our Store - Official Merch', 'https://strengthand-power-hall-of-fame.myshopify.com/', 'Shop Now' )
-    hr.my-1
+    hr.my-3
     .row.row-cols-1.row-cols-md-2.row-cols-lg-3.g-4.text-center
-        +menuitem( 'The Paul and Glenda Anderson Award', '/the-anderson-award', 'Paul and Glenda Anderson Award')
+        +menuitem( 'The Paul and Glenda Anderson Award', '/the-anderson-award', 'Visit')
         +menuitem( 'Sponsors', '/sponsors', 'Sponsors' )
         +menuitem( 'Misc Strength Articles', '/atlas/article/searchArticles?articleType=1&',  'Articles' )
 
